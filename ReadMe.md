@@ -1,6 +1,5 @@
 
 # ZELDA 2 REDUX
-## by ShadowOne333
 
 ----------------------------------------------------------------------------------
 
@@ -85,19 +84,30 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 ## Optional patches
 
-* FDSKingsTomb.ips 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
+* **FDSKingsTomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
-* KeepExpAtGameOver.ips			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
+* **KeepExpAtGameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
 
-* NewExp.ips 				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
+* **NewExp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
 
-* OriginalLinkDolls.ips			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
+* **OriginalLinkDolls.ips**			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
 
-* RestartSameAtScreenGameOver.ips	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
+* **OriginalRestartAtGameOver.ips**			- Similar to the above patch, this one restores the original behaviour of Link getting a Game Over and starting all the way back at Zelda's Palace.
+
+* **OriginalSpellMagicConsumption.ips**			- Restores the original magic consumption that each spell takes to that of the original Zelda II.
+
+* **OriginalTitleScreen.ips**			- Restores back the original Title Screen from Zelda II.
+
+* **ReduceLag.ips**			- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
+
+* **RemoveLowHealthBeep.ips**			- Removes the sound that starts playing constantly when Link is at low health.
+
+* **RestartSameScreenAtGameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
 This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
-* StaticExpAtPalaceCrystal.ips		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
+* **StaticExpAtPalaceCrystal.ips**		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
 
+<p align="center">
 |	Palace No.	|	Experience gained	|
 |:--------------------:	|:----------------------------:	|
 |	Palace 1	|	500 exp			|
@@ -106,10 +116,9 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 |	Palace 4	|	2000 exp		|
 |	Palace 5	|	2500 exp		|
 |	Palace 6	|	3000 exp		|
+</p>
 
-* ReduceLag.ips				- This patch reduces the amount of enemies that spawn in the screen, so that the lag caused by the number of sprites is greatly reduced.
-
-* Secret.ips				- ???
+* **Secret.ips**				- ???
 
 -------------------
 
@@ -118,7 +127,7 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 To play Zelda 2 Redux, the following is required:
 
 * FCEUX 2.2.3 or above
-* Zelda II ROM (Zelda II - The Adventure of Link (USA).nes, MD5: 764d36fa8a2450834da5e8194281035a)
+* Zelda II NES ROM (Zelda II - The Adventure of Link (USA).nes, MD5: 764d36fa8a2450834da5e8194281035a)
 * Lunar IPS
 * Zelda2 Redux.ips patch
 
@@ -129,11 +138,11 @@ If you want to apply any of the optional patches, you can either compile them ma
 
 ## Credits
 
-* Trax - For his amazing disassembly of Zelda 2, which helped with a ton of stuff, and also for a lot of feedback and help in the development of this hack.
-* njosro - For his Zelda 2 editor and help towards some hacks for Redux, like the Restart in Palace hack and also the restoration of the Erdrick line.
-* IcePenguin - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
-* DarkSamus993 - For his ASM dark magic regarding the Menus revamp for Redux.
-* JaSp - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
+* **Trax** - For his amazing disassembly of Zelda 2, which helped with a ton of stuff, and also for a lot of feedback and help in the development of this hack.
+* **njosro** - For his Zelda 2 editor and help towards some hacks for Redux, like the Restart in Palace hack and also the restoration of the Erdrick line.
+* **IcePenguin** - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
+* **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
+* **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
 -------------------
