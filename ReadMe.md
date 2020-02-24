@@ -1,11 +1,11 @@
 
-# ZELDA 2 REDUX
+# THE LEGEND OF ZELDA 2: ADVENTURE OF LINK REDUX
 
 ----------------------------------------------------------------------------------
 
 # **Index**
 
-* [**Zelda2 Redux Info**](#zelda-2-redux)
+* [**Zelda 2 Redux Info**](#zelda-2-redux)
 
 * [**Changelog**](#changelog)
 
@@ -108,6 +108,7 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 * **StaticExpAtPalaceCrystal.ips**		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
 
 <p align="center">
+
 |	Palace No.	|	Experience gained	|
 |:--------------------:	|:----------------------------:	|
 |	Palace 1	|	500 exp			|
@@ -116,6 +117,7 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 |	Palace 4	|	2000 exp		|
 |	Palace 5	|	2500 exp		|
 |	Palace 6	|	3000 exp		|
+
 </p>
 
 * **Secret.ips**				- ???
