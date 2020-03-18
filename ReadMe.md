@@ -133,8 +133,8 @@ To play Zelda 2 Redux, the following is required:
 * Lunar IPS
 * Zelda2 Redux.ips patch
 
-Grab the .zip file from the Releases page and apply the patch over your Zelda II ROM with Lunar IPS.
-If you want to apply any of the optional patches, you can either compile them manually from the source code, or use each Optional patch individually depending on your liking over your already patched Zelda 2 Redux ROM.
+Grab the patches from inside the /patches/ folder from the GitHub page, or alternatively, download the .zip file from the Releases page (once a proper release is out) and apply the patch over your Zelda II ROM with Lunar IPS.
+If you want to apply any of the optional patches, you can use each Optional patch individually from inside the /patches/optional folder depending on your liking over your already patched Zelda 2 Redux ROM, or you can either compile them manually from the source code, although this is not recommended if you are not familiar with compilations or 6502 assembly.
 
 -------------------
 

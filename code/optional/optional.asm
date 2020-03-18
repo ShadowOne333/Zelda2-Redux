@@ -23,7 +23,7 @@ incsrc code/optional/OriginalLinkDolls.asm
 incsrc code/optional/OriginalRestartAtGameOver.asm
 
 // Original Zelda 2 magic consumption
-incsrc code/optional/OriginalMagicConsumption.asm
+incsrc code/optional/OriginalSpellMagicConsumption.asm
 
 // Original Zelda 2 title screen
 incsrc code/optional/OriginalTitleScreen.asm
