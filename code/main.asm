@@ -49,6 +49,12 @@ incsrc code/tunic_colors.asm		// Make blue tunic more vivid
 // New Experience system
 //incsrc code/optional/NewExp.asm
 
+// Original Zelda 2 enemy attributes (Exp, HP, Respawn)
+//incsrc code/optional/OriginalEnemyAttributes.asm
+
+// Original Zelda 2 enemy drops (Kill 6 enemies for an item drop)
+//incsrc code/optional/OriginalEnemyDrops.asm
+
 // Original Zelda 2 behaviour when obtaining Link Dolls
 //incsrc code/optional/OriginalLinkDolls.asm
 

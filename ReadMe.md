@@ -84,28 +84,30 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 ## Optional patches
 
-* **FDSKingsTomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
+* **FDS King's Tomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
-* **KeepExpAtGameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
+* **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
 
-* **NewExp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
+* **New Exp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
 
-* **OriginalLinkDolls.ips**			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
+* **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game.
 
-* **OriginalRestartAtGameOver.ips**			- Similar to the above patch, this one restores the original behaviour of Link getting a Game Over and starting all the way back at Zelda's Palace.
+* **Original Link Dolls.ips**			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
 
-* **OriginalSpellMagicConsumption.ips**			- Restores the original magic consumption that each spell takes to that of the original Zelda II.
+* **Original Restart At GameOver.ips**			- Similar to the above patch, this one restores the original behaviour of Link getting a Game Over and starting all the way back at Zelda's Palace.
 
-* **OriginalTitleScreen.ips**			- Restores back the original Title Screen from Zelda II.
+* **Original Spell Magic Consumption.ips**			- Restores the original magic consumption that each spell takes to that of the original Zelda II.
 
-* **ReduceLag.ips**			- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
+* **Original Title Screen.ips**			- Restores back the original Title Screen from Zelda II.
 
-* **RemoveLowHealthBeep.ips**			- Removes the sound that starts playing constantly when Link is at low health.
+* **Reduce Lag.ips**			- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
 
-* **RestartSameScreenAtGameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
+* **Remove Low Health Beep.ips**			- Removes the sound that starts playing constantly when Link is at low health.
+
+* **Restart Same Screen At GameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
 This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
-* **StaticExpAtPalaceCrystal.ips**		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
+* **Static Exp At Palace Crystal.ips**		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
 
 <p align="center">
 
@@ -121,6 +123,14 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 </p>
 
 * **Secret.ips**				- ???
+
+-------------------
+
+## TO-DO
+
+* Keep Exp at Game Over should have a variant to make the Exp be saved per file on game reboot, or integrate it into the same optional patch
+* Restart at Same Screen should save/load whatever max number of Link dolls the player has at the moment
+* Copy/Erase save file Menu overhaul by DarkSamus993 pending for main Redux patch
 
 -------------------
 
