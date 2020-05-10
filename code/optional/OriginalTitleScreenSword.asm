@@ -1,5 +1,5 @@
 //********************************************************************
-// Original Title screen from Zelda 2
+// Original Title screen Sword graphics from Zelda 2
 //********************************************************************
 
 bank 5;
