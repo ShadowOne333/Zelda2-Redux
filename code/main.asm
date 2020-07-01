@@ -46,6 +46,9 @@ incsrc code/tunic_colors.asm		// Make blue tunic more vivid
 // Keep Experience Points after Game Over
 //incsrc code/optional/KeepExpAtGameOver.asm
 
+// New Graphics based on Rev Edition & New Link hacks
+//incsrc code/optional/NewGFX.asm
+
 // New Experience system
 //incsrc code/optional/NewExp.asm
 

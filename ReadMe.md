@@ -88,6 +88,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
 
+* **New GFX.ips**				- Completely revamped graphics courtesy of darthvaderx, based on the graphics used in the "Rev Edition" and "New Link Sprites" hacks.
+
 * **New Exp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
 
 * **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game.
@@ -156,6 +158,7 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
+* **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 
 -------------------
 
