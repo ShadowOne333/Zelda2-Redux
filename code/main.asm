@@ -1,86 +1,71 @@
-//********************************************************************************
-// Main assembly file.
+//****************************************************************
+//	Main assembly file for Zelda 2 Redux
 // All of the assembly files get linked together and compiled here.
-//********************************************************************************
+//****************************************************************
+
 //****************************************
-// Rom info
+//	Rom info
 //****************************************
 arch nes.cpu		// set processor architecture (NES)
 banksize $4000		// set the size of each bank
 header			// rom has a header
 
 //****************************************
-// Redux changes
+//	iNES Header
 //****************************************
-incsrc code/misc.asm			// Main ASM code for Redux
+	db $4E,$45,$53,$1A	// Header (NES $1A)
+	db $08			// 8 x 16k PRG banks
+	db $10			// 0 x 8k CHR banks
+	db %00010010		// ROM Settings
+	//  |||||||^--- Mirroring: Vertical
+	//  ||||||^--- SRAM: Yes
+	//  |||||^--- 512k Trainer: Not used
+	//  ||||^--- 4 Screen VRAM: Not used
+	//  ^^^^--- Mapper: 1
+	db %00000000		// RomType: NES
+	db $00,$00,$00,$00	// iNES Tail
+	db $00,$00,$00,$00
 
 //****************************************
-// Gameplay changes
+//	Redux changes
 //****************************************
-incsrc code/bombs.asm			// Increase initial max bombs and upgrades to 10
-incsrc code/automap.asm			// Disassembly of the Automap Plus hack by snarfblam
+incsrc code/redux.asm			// Main ASM code for Redux
 
 //****************************************
-// Text changes
+//	Gameplay changes
 //****************************************
-incsrc code/text.asm			// Relocalization of the game's script
-incsrc code/story.asm			// Rewrite of the game's story and intro texts
-incsrc code/credits.asm			// Rewrite of the game's credits sequences
+incsrc code/gameplay/enemies.asm	// Enemy attributes and HPs changes
+incsrc code/gameplay/misc.asm		// Miscellaneous hacks
+incsrc code/gameplay/palaces.asm	// Palaces (and Great Palace) modifications
+incsrc code/gameplay/tunic.asm		// Make Shield spell change tunic to Blue and Red
+incsrc code/menus/file_select.asm	// Modifications to the File Select menus
+incsrc code/menus/menus.asm		// Character or tile changes for Menus
+incsrc code/menus/panes.asm		// Changes to the Pause and Level-Up panes
+incsrc code/sound/battle_theme.asm	// FDS Battle Theme in East Hyrule
 
 //****************************************
-// Visual changes
+//	Text changes
 //****************************************
-incsrc code/graphics.asm		// Sprite/graphic changes
-incsrc code/title_screen.asm		// Title screen visual changes
-incsrc code/tunic_colors.asm		// Make blue tunic more vivid
-
+incsrc code/text/script.asm		// Relocalization of the game's script
+incsrc code/text/story.asm		// Rewrite of the game's story and intro texts
+incsrc code/text/credits.asm		// Rewrite of the game's credits sequences
+incsrc code/text/textmisc.asm		// Various changes to text-related code
 
 //****************************************
-// Optional patches
+//	Visual changes
+//****************************************
+incsrc code/gfx/graphics.asm		// Sprite/graphic changes
+incsrc code/gfx/hud_hearts.asm		// Life Meter with Hearts in HUD
+incsrc code/gfx/hud_tiles.asm		// HUD layout modifications
+incsrc code/gfx/palettes.asm		// Several palette changes
+incsrc code/gfx/title_screen.asm		// Title screen changes
+
+//****************************************
+//	Optional patches
 // Uncomment the desired Optional patches
 //****************************************
 
-// Famicom Disk System version King's Tomb layout
-//incsrc code/optional/FDSKingsTomb.asm
+// Include optional patches
+// Uncomment desired patches inside "optional.asm" for them to compile
+incsrc code/optional.asm
 
-// Keep Experience Points after Game Over
-//incsrc code/optional/KeepExpAtGameOver.asm
-
-// New Graphics based on Rev Edition & New Link hacks
-//incsrc code/optional/NewGFX.asm
-
-// New Experience system
-//incsrc code/optional/NewExp.asm
-
-// Original Zelda 2 enemy attributes (Exp, HP, Respawn)
-//incsrc code/optional/OriginalEnemyAttributes.asm
-
-// Original Zelda 2 enemy drops (Kill 6 enemies for an item drop)
-//incsrc code/optional/OriginalEnemyDrops.asm
-
-// Original Zelda 2 behaviour when obtaining Link Dolls
-//incsrc code/optional/OriginalLinkDolls.asm
-
-// Original Zelda 2 behaviour when getting a Game Over 
-//incsrc code/optional/OriginalRestartAtGameOver.asm
-
-// Original Zelda 2 magic consumption
-//incsrc code/optional/OriginalSpellMagicConsumption.asm
-
-// Original Zelda 2 title screen
-//incsrc code/optional/OriginalTitleScreen.asm
-
-// Reduce lag in-game - Reduces number of enemies on-screen
-//incsrc code/optional/ReduceLag.asm
-
-// Remove the low health beeping
-//incsrc code/optional/RemoveLowHealthBeep.asm
-
-// Restart on the same screen after a Game Over
-//incsrc code/optional/RestartSameScreenAtGameOver.asm
-
-// Secret... ???
-//incsrc code/optional/Secret.asm
-
-// Static experience points while placing each Palace Crystal
-//incsrc code/optional/StaticExpAtPalaceCrystal.asm

@@ -88,23 +88,29 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
 
-* **New GFX.ips**				- Completely revamped graphics courtesy of darthvaderx, based on the graphics used in the "Rev Edition" and "New Link Sprites" hacks.
-
 * **New Exp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
+
+* **New GFX.ips**				- Completely revamped graphics courtesy of darthvaderx, based on the graphics used in the "Rev Edition" and "New Link Sprites" hacks.
 
 * **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game.
 
 * **Original Link Dolls.ips**			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
 
-* **Original Restart At GameOver.ips**			- Similar to the above patch, this one restores the original behaviour of Link getting a Game Over and starting all the way back at Zelda's Palace.
+* **Original Restart At Game Over.ips**		- Similar to the above patch, this one restores the original behaviour of Link getting a Game Over and starting all the way back at Zelda's Palace.
 
-* **Original Spell Magic Consumption.ips**			- Restores the original magic consumption that each spell takes to that of the original Zelda II.
+* **Original Spell Magic Consumption.ips**	- Restores the original magic consumption that each spell takes to that of the original Zelda II.
 
-* **Original Title Screen.ips**			- Restores back the original Title Screen from Zelda II.
+* **Original Title Screen (Sword+Palette).ips**	- Restores back the original Title Screen from Zelda II.
 
-* **Reduce Lag.ips**			- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
+* **Original Title Screen Palette.ips**		- Restores only the palette of the original Title Screen from Zelda II, keeping the new Sword
 
-* **Remove Low Health Beep.ips**			- Removes the sound that starts playing constantly when Link is at low health.
+* **Original Title Screen Sword.ips**		- Restores only the sword of the original Title Screen from Zelda II, keeping the new palette
+
+* **Reduce Lag.ips**				- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
+
+* **Remove Low Health Beep.ips**		- Removes the sound that starts playing constantly when Link is at low health.
+
+* **Revility Edition Sprites**			- New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 
 * **Restart Same Screen At GameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
 This patch already includes the "KeepExpAtGameOver.ips" hack into it.
@@ -157,8 +163,8 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **IcePenguin** - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
 * **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
-* All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 * **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
+* All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
 -------------------
 
