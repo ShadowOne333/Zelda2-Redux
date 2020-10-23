@@ -4,7 +4,7 @@
 
 bank 0;
 org $179C	// 0x017AC
-	jsr hearts_life	// $B000, Originally LDA $0774
+	jsr l_B000	// $B000, Originally LDA $0774
 	nop		// Originally STA $0565
 	jsr l_B100	// $B100, Originally LSR x5 
 	nop		
@@ -80,7 +80,7 @@ org $AD00	// 0x02D10
 
 // Hearts in Life meter
 org $B000	// 0x03010
-hearts_life:
+l_B000:
 	lda.b #$00	// Load zero into accumulator
 	cmp.w $0774	// Current life left in meter
 	bne $01
@@ -328,3 +328,10 @@ l_B100:
 	lda.b #$C7
 	sta.w $030C,y
 	rts
+
+
+bank 7;
+// Load current life left in Meter for HUD update
+org $D4D1	// 0x1D4E1
+	lda.w $0774	// Originally LDA $0565
+

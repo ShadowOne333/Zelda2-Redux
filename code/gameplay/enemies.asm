@@ -52,7 +52,7 @@ org $88D9	// 0x0C8E9
 org $8A7C	// 0x0CA8C
 	db $F4,$67,$FF,$15,$6D	// Area data for Towns (?)
 
-// UNUSED SPACE - UNKNOWN
+// UNUSED SPACE
 org $8C30	// 0x0CC40
 enemy_data:
 	db $13,$78,$06,$76,$21,$5A,$06,$68

@@ -1,95 +1,45 @@
 //********************************************************************
-// New Experience system
+//	New Experience system
 //********************************************************************
 
 bank 0;
 org $968D	// 0x0169D
 	jsr $A8B0
 
-org $96A0	// 0x016B0
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
+org $9690	// 0x016A0
+	fill $11,$EA	// Fill $11 bytes with NOP
 
 org $9DA7	// 0x01DB7
 	jsr $A8D0
 
 org $A0CE	// 0x020DE
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
+	fill $22,$EA	// Fill $22 bytes with NOP
 
 org $A8B0	// 0x028C0
 	lda.b #$27
 	cmp.w $0775
-	beq label1	// F0 01
+	beq l_A8B8	// BEQ $01
 	rts
-label1:
+l_A8B8:
 	lda.b #$0F
 	cmp.w $0776
-	bmi.w $0010
+	bmi l_A8C0	// BMI $01
 	rts
-
+l_A8C0:
 	lda.b #$27
 	sta.w $0775
 	lda.b #$0F
 	sta.w $0776
 	rts
 
-	db $FF,$FF,$FF,$FF,$FF
+	fill $05,$FF
 
 	lda.b $F7
 	and.b #$08
-	bne label2	// D0 04
+	bne l_A8DA	// BNE $04
 	inc.w $0524
 	rts
-
-label2:
+l_A8DA:
 	lda.b #$01
 	sta.w $074C
 	lda.b #$03

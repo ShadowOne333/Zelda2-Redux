@@ -8,7 +8,7 @@
 table code/text/text.tbl
 
 //***********************************************************
-//	Manual save
+//	Manual save by pressing Up+A on Pause
 //***********************************************************
 
 bank 0;
@@ -24,9 +24,6 @@ org $A1B3	// 0x021C3
 // Change save input from controller 2 to controller 1 at Pause Pane
 org $A1DD	// 0x021ED
 	lda.b $F7	// Originally LDA $F8, Controller 2
-
-org $A251	// 0x02261
-	lda.b #$9C	// Originally LDA #$FA, Controller 1? (Magic bag tile?)
 
 org $A25D	// 0x0226D
 	jsr l_ABA0	// $ABA0, Originally LDA $F7, Controller 1
@@ -81,30 +78,7 @@ org $AAB0
 l_AAB0:
 	db $01,$01,$01,$01
 
-
-// Unknown ???
-org $AB10	// 0x02B20
-	lda.w $0707	// Load current world
-	rts
-	lda.w $0706
-	asl
-	asl
-	clc
-	adc.w $0707	// Add into $0707 (World)
-	adc.w $0748	// Add into overworld area outside of view
-	sec
-	sbc.b #$34
-	tax
-	lda.w l_AB30,x	// Load table at $AB30
-	sta.w $0561	// Store into area code address
-	jmp $C358
-org $AB30	// 0x02B40
-l_AB30:
-	db $FF,$FF,$FF,$00,$0E,$FF,$00,$FF
-	db $0F,$FF,$FF,$23,$FF,$24,$FF,$00
-
-
-
+bank 0;
 // Life counter change for manual save
 org $AB96	// 0x02BA6
 	inc.w $0700	// Increment Life counter address
@@ -117,7 +91,7 @@ l_ABA0:
 	beq end		// BEQ $07, branch if equal to RTS
 	cmp.b $00	// Compare if $00
 	beq end		// BEQ $03, branch if equal to RTS
-	jmp $ABB0	// Jump to $ABB0
+	jmp l_ABB0	// Jump to $ABB0
 end:
 	rts
 
@@ -125,10 +99,10 @@ org $ABB0	// 0x02BC0
 l_ABB0:
 	lda.b #$00
 	cmp.w $0727	// Load ??? from RAM
-	beq routine	// BEQ $04, branch if equal to 
+	beq l_ABBB	// BEQ $04, branch if equal to 
 	inc.w $0524	// Increment Routine index
 	rts
-routine:
+l_ABBB:
 	lda.b #$58	// Load $58 into accumulator
 	sta.w $0244	// Store at $0244 in RAM
 	lda.b #$89	// Load $89 into accumulator
@@ -180,12 +154,12 @@ routine:
 
 	inc.w $0524	// Increment Routine index
 	lda.b #$18	// Load $18 into accumulator
-	cmp.w $00FE
-	beq cont2	// BEQ $06, branch if equal to
-	lda.b #$18
-	sta.w $00FE
+	cmp.w $00FE	// Compare with value at $00FE
+	beq l_AC43	// BEQ $06, branch if equal to
+	lda.b #$18	// Load $18 into accumulator
+	sta.w $00FE	// Store at $00FE
 	rts
-cont2:
+l_AC43:
 	lda.b #$F8	// Load controller 1 inputs
 	sta.w $00FE
 	rts
@@ -207,78 +181,9 @@ decrement:
 	dec.w $079E
 	rts
 
-
-//***********************************************************
-//	Permanent Link Dolls
-//***********************************************************
-
 bank 7;
-// Jump to custom subroutine
-org $C182	// 0x1C192
-	jsr $FF4C	// Permanent frame counter, jump to $FF4C
-
-// Related to Link Dolls hack
-org $C1F6	// 0x1C206
-	bmi $0E		// Originally BCC $0E
-
-// Routine to modify the number of lives depending on the number of Link Dolls collected
-org $C358	// 0x1C368
-	jsr $D3B0	// Originally LDA #$03
-	nop		// STA $0700
-	nop
-// Related to the number of lives
-org $CA9C	// 0x1CAAC
-	jsr $D3A0	// Originally LDA $079F
-org $CAD0	// 0x1CAE0
-	jsr $AB10	// Originally JSR $CF30
-	cmp.b #$03	// Originally CMP #$0F
-	bcs $07		// Originally BEQ $07/$1CADE
-org $CADE	// 0x1CAEE
-	jsr $AB14	// Originally JSR $C358
-	lda.b #$00
-	nop
-	nop
-	nop
-
-// Related to Link Dolls hack
-org $C3D4	// 0x1C3E4
-	jsr $FF5E	// Originally LDA $0700
-
-// ???
-org $C436	// 0x1C446
-	jsr $A900	// Originally STA $075F
-
-
-// Unknown Table (?)
-org $C9EA	// 0x1C9FA
-	db $07,$26,$07,$26,$20,$C5,$FF	// Originally 12 16 2A 16 20 C5 FF
-
-
-// HUD Tile mapping PPU transfers
-org $D0D1	// 0x1D0E1
-	db $20,$78,$06	// PPU transfer to $2078
-	db $FB,"LEVEL"	// Triangle + LEVEL tiles
-l_D0DA:		// 0x1D0EA
-	db $20,$6E,$05	// PPU transfer to $206E
-	db $FB,"EXP",$FB// Triangles + EXP tiles
-l_D0E2:		// 0x1D0F2
-	db $20,$57,$04	// PPU transfer to $2057
-	db $C9,"  ",$FA	// Sword and Shield tiles
-l_D0E9:		// 0x1D0F9
-	db $20,$5D,$01	// PPU transfer to $205D
-	db $F8
-l_D0ED:		// 0x1D0FD
-	db $20,$41,$01	// PPU transfer to $2041
-	db " "
-l_D0F1:		// 0x1D101
-	db $20,$54,$01	// PPU transfer to $2054
-	db "0"
-l_D0F5:		// 0x1D105
-	db $20,$7E,$01
-	db $FB		// Triangle tile
-
 // Manual save fix so the game doesn't count saves as Deaths
-org $D3A0
+org $D3A0	// 0x1D3B0
 	lda.w $0700	// Load number of lives
 	beq l_D3A8	// Branch if equal to $00
 	lda.b #$FF	// Load $FF into accumulator
@@ -301,16 +206,50 @@ l_D3BE:
 	sta.w $0700	// Store $03 as number of lives
 	rts
 
-// Load current life left in Meter for HUD update
-org $D4D1	// 0x1D4E1
-	lda.w $0774	// Originally LDA $0565
+
+//***********************************************************
+//	Permanent Link Dolls
+//***********************************************************
+
+bank 7;
+// Jump to custom subroutine for Link Dolls
+org $C182	// 0x1C192
+	jsr l_FF4C	// Permanent frame counter, jump to $FF4C
+
+// Related to Link Dolls hack
+org $C1F6	// 0x1C206
+	bmi $0E		// Originally BCC $0E
+
+// Routine to modify the number of lives depending on the number of Link Dolls collected
+org $C358	// 0x1C368
+	jsr $D3B0	// Originally LDA #$03
+	nop		// STA $0700
+	nop
+// Related to the number of lives
+org $CA9C	// 0x1CAAC
+	jsr $D3A0	// Originally LDA $079F
+
+// Related to Link Dolls hack
+org $C3D4	// 0x1C3E4
+	jsr l_FF5E	// Originally LDA $0700
+
+// ???
+org $C436	// 0x1C446
+	jsr $A900	// Originally STA $075F
+
+
+// Unknown Table (?)
+org $C9EA	// 0x1C9FA
+	db $07,$26,$07,$26,$20,$C5,$FF	// Originally 12 16 2A 16 20 C5 FF
+
 
 // Jump to new Link Doll routine
 org $E818	// 0x1E828
-	jsr $FF57	// Originally INC $0700
+	jsr l_FF57	// Originally INC $0700
 
 // Link Doll permanent lives increment
 org $FF4C	// 0x1FF5C
+l_FF4C:
 	lda.w $0768	// Load PPU register flags
 	bne l_FF54	// BNE $03, Branch if not $00
 	jsr $AA40	// Jump to $2A30

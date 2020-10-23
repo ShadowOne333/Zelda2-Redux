@@ -6,27 +6,29 @@
 
 bank 0;
 // Palette for Falling Animation
-org $A849	// 0x002859
+org $A849	// 0x02859
 	db $0F,$07,$37,$29	// Originally [0F 18 36 2A]
 // Palette for Flashing Link
-org $AA04	// 0x002A14
-	db $31,$01,$29		// Originally [01 2A 11]
+org $A9F0	// 0x02A00
+	db $12,$16,$29		// Originally [12 16 2A]
+org $AA05	// 0x02A15
+	db $01,$29,$11		// Originally [01 2A 11]
 
 bank 1;
 // Palette for West Hyrule Grass
-org $8036	// 0x004046
+org $8036	// 0x04046
 	db $0F,$29,$27,$17	// Originally [0F 29 19 09]
 // Palette for Link (Grass, Desert, Swamp, Graveyard and Lava)
-org $809E	// 0x0040AE
+org $809E	// 0x040AE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palette for Link (Forest)
-org $80AE	// 0x0040BE
+org $80AE	// 0x040BE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palette for Link (Unknown)
-org $80BE	// 0x0040CE
+org $80BE	// 0x040CE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palette for Link (Unknown)
-org $80CE	// 0x0040DE
+org $80CE	// 0x040DE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 
 bank 2;
@@ -56,8 +58,9 @@ org $8092	// 0x00C0A2
 org $809E	// 0x00C0AE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palettes for Link (Unknown)
-org $80AE	// 0x00C0BE
-	db $FF,$07,$37,$29	// Originally [FF 18 36 2A] 
+org $80AA	// 0x00C0BE
+	db $FF,$0F,$11,$37	// Originally [FF 0F 13 36] 
+	db $FF,$07,$37,$29
 org $80BA	// 0x00C0CA
 	db $FF,$01,$2D,$37	// Originally [FF 03 10 36]
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
@@ -114,12 +117,11 @@ org $80CE	// 0x0140DE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palettes for Intro
 org $AF40	// 0x016F50
-	db $0F,$28,$18,$06	// Originally [0F 30 1C 15]
-	db $0F,$18,$0F,$08	// Originally [0F 2B 0F 00]
+	db $0F,$28,$11,$16	// Originally [0F 30 1C 15]
+	db $0F,$27,$0F,$07	// Originally [0F 2B 0F 00]
 org $AF54	// 0x016F64
-	db $0F,$18,$0F,$08	// Originally [0F 2B 0F 00]
-	db $0F,$16,$10,$30	// Originally [0F 16 26 30]
-	db $0F,$08,$19,$21	// Originally [0F 0F 19 21]
+	db $0F,$27,$0F,$07	// Originally [0F 2B 0F 00]
+	db $0F,$0C,$00,$30	// Originally [0F 16 26 30]
 // Palette for Selection Screen (Link)
 org $BC08	// 0x017C18
 	db $0F,$07,$37,$29	// Originally [0F 18 36 2A]
@@ -135,10 +137,9 @@ org $8453	// 0x01C463
 org $8467	// 0x01C477
 	db $0F,$30,$38,$21	// Originally [0F 30 36 21]
 	db $0F,$07,$37,$29	// Originally [0F 18 36 2A]
-	db $0F,$30,$12,$0F	// Originally [0F 0F 0F 0F]
-	db $0F,$30,$16,$0F	// Originally [0F 30 16 30]
 
 bank 8;
 // Import the new graphics
 org $20000	// 0x020000
-	incbin code/optional/NewGFX.bin
+	incbin code/optional/RevilityGFX.bin
+

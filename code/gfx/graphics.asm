@@ -2,7 +2,7 @@
 //	Import modified graphics
 //****************************************
 
-bank 7; org $FFFF	// $0x2000F
-	db $FF
-
-incbin code/gfx/ReduxGFX.bin
+bank 8;
+// Title screen graphics
+org $20000	// 0x20010
+	incbin code/gfx/ReduxGFX.bin

@@ -1,5 +1,5 @@
 //********************************************************************
-// Original Spell Magic Consumption behaviour from Zelda 2
+//	Original Spell Magic Consumption behaviour
 //********************************************************************
 
 bank 0;

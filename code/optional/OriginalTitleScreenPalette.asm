@@ -1,5 +1,5 @@
 //********************************************************************
-// Original Title screen palette from Zelda 2
+//	Original Title screen palette from Zelda 2
 //********************************************************************
 
 bank 5;

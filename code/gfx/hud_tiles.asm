@@ -23,8 +23,7 @@ org $962E	// 0x0163E
 org $968B	// 0x0169B
 	db $08,$08	// Originally 20 68
 
-// STUFF RELATED TO HUD... ?
-
+// STUFF RELATED TO HUD
 org $96BD	// 0x016CD
 	lda.w $AB80,x	// Originally LDA $962E,X
 
@@ -81,3 +80,28 @@ org $AB80	// 0x02B90
 	db $20,$5E,$0C
 	db "1  m        "
 	db $FF
+
+
+bank 7;
+// HUD Tile mapping PPU transfers
+org $D0D1	// 0x1D0E1
+	db $20,$78,$06	// PPU transfer to $2078
+	db $FB,"LEVEL"	// Triangle + LEVEL tiles
+l_D0DA:		// 0x1D0EA
+	db $20,$6E,$05	// PPU transfer to $206E
+	db $FB,"EXP",$FB// Triangles + EXP tiles
+l_D0E2:		// 0x1D0F2
+	db $20,$57,$04	// PPU transfer to $2057
+	db $C9,"  ",$FA	// Sword and Shield tiles
+l_D0E9:		// 0x1D0F9
+	db $20,$5D,$01	// PPU transfer to $205D
+	db $F8
+l_D0ED:		// 0x1D0FD
+	db $20,$41,$01	// PPU transfer to $2041
+	db " "
+l_D0F1:		// 0x1D101
+	db $20,$54,$01	// PPU transfer to $2054
+	db "0"
+l_D0F5:		// 0x1D105
+	db $20,$7E,$01
+	db $FB		// Triangle tile

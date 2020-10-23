@@ -37,10 +37,9 @@ incsrc code/redux.asm			// Main ASM code for Redux
 incsrc code/gameplay/enemies.asm	// Enemy attributes and HPs changes
 incsrc code/gameplay/misc.asm		// Miscellaneous hacks
 incsrc code/gameplay/palaces.asm	// Palaces (and Great Palace) modifications
+incsrc code/gameplay/restart_palace.asm	// Restart at Palace entrance on Game Over (by njosro)
 incsrc code/gameplay/tunic.asm		// Make Shield spell change tunic to Blue and Red
 incsrc code/menus/file_select.asm	// Modifications to the File Select menus
-incsrc code/menus/menus.asm		// Character or tile changes for Menus
-incsrc code/menus/panes.asm		// Changes to the Pause and Level-Up panes
 incsrc code/sound/battle_theme.asm	// FDS Battle Theme in East Hyrule
 
 //****************************************
@@ -58,7 +57,9 @@ incsrc code/gfx/graphics.asm		// Sprite/graphic changes
 incsrc code/gfx/hud_hearts.asm		// Life Meter with Hearts in HUD
 incsrc code/gfx/hud_tiles.asm		// HUD layout modifications
 incsrc code/gfx/palettes.asm		// Several palette changes
-incsrc code/gfx/title_screen.asm		// Title screen changes
+incsrc code/gfx/title_screen.asm	// Title screen changes
+incsrc code/menus/menus.asm		// Character or tile changes for Menus
+incsrc code/menus/panes.asm		// Changes to the Pause and Level-Up panes
 
 //****************************************
 //	Optional patches

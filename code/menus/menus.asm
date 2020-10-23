@@ -10,11 +10,14 @@ org $878C	// 0x0079C
 org $9F38	// 0x01F48
 	lda.b #$9C	// LDA #$FB
 // Change Magic bag tile for new Arrow
+org $A251	// 0x02261
+	lda.b #$9C	// Originally LDA #$FA
+// Change Magic bag tile for new Arrow
 org $A63D	// 0x0264D
-	lda.b #$9C	// Originally LDA #$FA, Controller 1?
+	lda.b #$9C	// Originally LDA #$FA
 // Change old Arrow tile for new one
 org $A67B	// 0x0268B
-	ldx.b #$9C	// Originally LDA #$FB, Controller 2?
+	ldx.b #$9C	// Originally LDA #$FB
 // Change "x" in Lives remaining screen to uppercase "X"
 org $A991	// 0x029A1
 	db "X"		// Originally $FC or "x"

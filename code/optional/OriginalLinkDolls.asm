@@ -1,11 +1,11 @@
 //********************************************************************
-// Original Link Dolls behaviour from Zelda 2
+//	Original Link Dolls behaviour from Zelda 2
 //********************************************************************
 
 bank 7;
-org $C35C	// 0x1C36C
+org $C358	// 0x1C368
 	lda.b #$03
 	sta.w $0700
 
-org $E81A	// 0x1E828
+org $E818	// 0x1E828
 	inc.w $0700
