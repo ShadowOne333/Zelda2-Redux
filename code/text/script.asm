@@ -32,21 +32,21 @@ org $AFBE  // 0x0EFCE
 	dw text_36,text_37,text_38,text_39
 	dw text_40,text_41,text_42,text_43
 	dw text_44,text_45,text_46,text_47
-	dw text_49,text_50,text_51,text_52
-org $B016	// 0x0F026
+	dw text_48,text_49,text_50,text_51
+org $B026	// 0x0F036
 // East Hyrule Towns Text pointers
-	dw text_53,text_54,text_55,text_56
-	dw text_57,text_58,text_59,text_60
-	dw text_61,text_62,text_63,text_64
-	dw text_65,text_66,text_67,text_68
-	dw text_69,text_70,text_71,text_72
-	dw text_73,text_74,text_75,text_76
-	dw text_77,text_78,text_79,text_80
-	dw text_81,text_82,text_83,text_84
-	dw text_85,text_86,text_87,text_88
-	dw text_89,text_90,text_91,text_92
-	dw text_93,text_94,text_95,text_96
-	dw text_97
+	dw text_52,text_53,text_54,text_55
+	dw text_56,text_57,text_58,text_59
+	dw text_60,text_61,text_62,text_63
+	dw text_64,text_65,text_66,text_67
+	dw text_68,text_69,text_70,text_71
+	dw text_72,text_73,text_74,text_75
+	dw text_76,text_77,text_78,text_79
+	dw text_80,text_81,text_82,text_83
+	dw text_84,text_85,text_86,text_87
+	dw text_88,text_89,text_90,text_91
+	dw text_92,text_93,text_94,text_95
+	dw text_96,text_97
 
 //****************************************
 //	Dialogue
@@ -341,7 +341,7 @@ text_32:
 
 //----------------------------------------
 
-text_33:	// Repoint 4, 0xF010
+text_33:	// Repoint 5, 0xF010
 	db "USE KEYS IN",{line}
 	db "THE TEMPLES",{line}
 	db "WHERE THEY",{line}
@@ -368,7 +368,7 @@ text_35:
 
 //----------------------------------------
 
-text_36:	// Repoint 5, 0xF016
+text_36:	// Repoint 6, 0xF016
 	db "ONLY SARIA",{line}
 	db "TOWNSFOLK",	{line}
 	db "MAY CROSS",	{line}
@@ -479,7 +479,7 @@ text_47:
 
 //----------------------------------------
 
-text_48:	// Repoint 6, 0xF02E
+text_48:	// Repoint 7, 0xF02E
 	db "MY NAME IS",{line}
 	db "BUG. SHOW",	{line}
 	db "THIS LETTER",{line}
@@ -564,7 +564,7 @@ text_58:
 //----------------------------------------
 
 text_59:
-	db "I CAN'",	{line}
+	db "I CAN'T",	{line}
 	db "HELP YOU.",	{end}
 
 //----------------------------------------
@@ -594,7 +594,7 @@ text_62:
 
 //----------------------------------------
 
-text_63:	// Repoint 7, 0xF04C
+text_63:	// Repoint 8, 0xF04C
 	db "YOU DREW",	{line}
 	db "SOME WATER",{line}
 	db "FROM THE",	{line}
@@ -671,7 +671,7 @@ text_71:
 
 //----------------------------------------
 
-text_72:	// Repoint 8, 0xF05E
+text_72:	// Repoint 9, 0xF05E
 	db "THE RIVER",	{line}
 	db "MONSTER",	{line}
 	db "HATES ALL",	{line}
@@ -737,7 +737,7 @@ text_78:
 
 //----------------------------------------
 
-text_79:	// Repoint 9, 0xF06C
+text_79:	// Repoint 10, 0xF06C
 	db "MY CHILD IS",{line}
 	db "CAPTURED",	{line}
 	db "ON MAZE",	{line}
@@ -775,7 +775,7 @@ text_82:
 
 //----------------------------------------
 
-text_83:	// Repoint 10, 0xF074
+text_83:	// Repoint 11, 0xF074
 	db "EVERYONE",	{line}
 	db "FLED FROM",	{line}
 	db "KASUTO WHEN",{line}
@@ -861,7 +861,7 @@ text_92:
 
 //----------------------------------------
 
-text_93:	// Repoint 11, 0xF088
+text_93:	// Repoint 12, 0xF088
 	db "THIS SPELL",{line}
 	db "HAS SOME",	{line}
 	db "MYSTERIOUS",{line}

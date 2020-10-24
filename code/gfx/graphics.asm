@@ -3,6 +3,6 @@
 //****************************************
 
 bank 8;
-// Title screen graphics
+// Import new Redux graphics
 org $20000	// 0x20010
 	incbin code/gfx/ReduxGFX.bin

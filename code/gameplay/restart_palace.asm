@@ -26,6 +26,7 @@ l_AB30:
 	db $0F,$FF,$FF,$23,$FF,$24,$FF,$00
 
 bank 7;
+// Restart routines hi-jacks
 org $CAD0	// 0x1CAE0
 	jsr l_AB10	// Originally JSR $CF30
 	cmp.b #$03	// Originally CMP #$0F

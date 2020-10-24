@@ -20,6 +20,8 @@ org $94F7	// 0x09507
 // Allow Dumb Moblin to give out minimum Exp
 	db $51	// Dumb Moblin, Originally $50
 
+//---------------------------------------------
+
 bank 2;
 // Enemy data in East Hyrule
 // Unknown values changed
@@ -38,6 +40,7 @@ org $94EF	// 0x094FF
 	db $8A	// Fix Red Lizalfos experience points, originally $89
 	db $49	// Fix Orange Lizalfos experience points, originally $4A
 
+//---------------------------------------------
 
 bank 3;
 // Enemy data pointers, repoint enemy
@@ -63,6 +66,7 @@ org $94D9	// 0x0D4E9
 // Change enemy attribute
 	db $C1	// Add tile mapping to an enemy (?)
 
+//---------------------------------------------
 
 bank 4;
 org $8B64	// 0x10B74
@@ -106,6 +110,7 @@ org $A9DB	// 0x129EB
 org $A9F1	// 0x12A01
 	db $83	// Originally $93
 
+//---------------------------------------------
 
 bank 5;
 // Repoint certain enemies for Great Palace
@@ -131,6 +136,7 @@ org $94DB	// 0x155EB
 	db $47,$C0,$48,$8B
 	db $CC
 
+//---------------------------------------------
 
 bank 7;
 // Disallow Moa from stealing Exp

@@ -164,22 +164,6 @@ l_AC43:
 	sta.w $00FE
 	rts
 
-// Force Lives counter to print out max number of 9
-org $AC60	// 0x02C70
-	lda.w $079E
-	lda.w $0700	// Load current number of lives
-	sta.w $079E
-	lda.b #$09
-	cmp.w $079E
-	bpl decrement	// BPL $06, Branch on plus to
-	lda.b #$0A
-	sta.w $079E
-	rts
-decrement:
-	inc.w $079E
-	lda.w $079E
-	dec.w $079E
-	rts
 
 bank 7;
 // Manual save fix so the game doesn't count saves as Deaths
