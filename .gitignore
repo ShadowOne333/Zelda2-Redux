@@ -1,4 +1,5 @@
 #Ignore all ROM files
+*.nes
 out/*.nes
 out/*.deb
 rom/*.nes
