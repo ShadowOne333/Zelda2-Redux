@@ -1,6 +1,6 @@
-//***********************************************************
-//	File Select changes (by DarkSamus993)
-//***********************************************************
+//***************************************************************
+// File Select changes (by DarkSamus993, D-man and Cyneprepou4uk)
+//***************************************************************
 
 //****************************************
 // 	Table file
@@ -10,7 +10,7 @@ table code/text/text.tbl
 //----------------------------------------
 
 bank 5;
-// Move Fairy cursor down by pressing either Select or Down in D-Pad
+// Move Fairy cursor down by pressing either Select or Down in D-Pad (by DarkSamus993)
 org $B303	// 0x17313
 	lda.b $F5	// Controller 1 buttons pressed
 	and.b #$24	// Check if Down-Select is pressed
@@ -116,8 +116,10 @@ l_B3A1:
 
 	fillto $B3CF,$FF
 
+// Elimination mode Cursor Up/Down (by D-man/Cyneprepou4uk)
 org $B4A6	// 0x174B6
-	jsr $BE20
+l_B4A6:
+	jsr l_BE20
 	tya
 	pha
 	jsr $B502
@@ -142,10 +144,44 @@ l_B4BC:
 l_B4CD:
 	db $01,$FF,$01,$FF
 	db $FF,$FF,$FF,$FF
+org $BE20	// 0x17E30
+l_BE20:
+	jsr l_BE26
+	jmp l_BE3D
+l_BE26:
+	ldy.b #$02
+	ldx.b $F5
+	txa
+	and.b #$24
+	bne l_BE37	// BNE $08
+	dey
+	txa
+	and.b #$08
+	bne l_BE3A	// BNE $05
+	dey
+	rts
+l_BE37:
+	inc.b $19
+	rts
+l_BE3A:
+	dec.b $19
+	rts
+l_BE3D:
+	lda.b $19
+	and.b #$03
+	sta.b $19
+	tya
+	beq l_BE48	// BEQ $02
+	lda.b #$04
+l_BE48:
+	sta.b $EB
+	rts
+
 
 org $B759	// 0x17769
 	lda.b #$C7	// LDA #$FF
 
+// Bugfix for the alphabet cursor covering the box line
 org $B86C	// 0x1787C
 	lda.b #$C7	// LDA #$FF	
 

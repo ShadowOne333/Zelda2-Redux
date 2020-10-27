@@ -4,7 +4,7 @@
 
 bank 1;
 // Enemy data in West Hyrule and Death Mountain
-// Unknown value changed
+// Move Red Moblin on the long bridge after exiting Death Mountain to the right a bit so he spawn falling on screen.
 org $8921	// 0x04931
 	db $22
 
@@ -24,9 +24,10 @@ org $94F7	// 0x09507
 
 bank 2;
 // Enemy data in East Hyrule
-// Unknown values changed
+// Move Basilisk at cave north of Nabooru to the left, to prevent a weird screen wrap upon entry
 org $89CF	// 0x089DF
 	db $7D,$98
+// Move Moa atPath of Fire entrance by the graveyard up, preventing a forced hit on Link.
 org $8A1F	// 0x08A2F
 	db $40
 
@@ -43,7 +44,7 @@ org $94EF	// 0x094FF
 //---------------------------------------------
 
 bank 3;
-// Enemy data pointers, repoint enemy
+// Repointed the enemy data for the last scene in Old Kasuto.  Added an object for the sign, so now it has text.
 org $85CB	// 0x0C5DB
 	dw $7390	// Points to $CC30, originally $70F9/$C990, label "enemy_data"
 
@@ -52,11 +53,10 @@ org $85CB	// 0x0C5DB
 org $88D9	// 0x0C8E9
 	db $7B,$8C
 
-org $8A7C	// 0x0CA8C
-	db $F4,$67,$FF,$15,$6D	// Area data for Towns (?)
-
 // UNUSED SPACE
+// Repointed the enemy data for the last scene in Old Kasuto.  Added an object for the sign, so now it has text.
 org $8C30	// 0x0CC40
+// 76 21 is the new sign object, and all the original Moas are untouched.
 enemy_data:
 	db $13,$78,$06,$76,$21,$5A,$06,$68
 	db $46,$5A,$46,$68,$86,$5A,$86,$68
@@ -69,6 +69,7 @@ org $94D9	// 0x0D4E9
 //---------------------------------------------
 
 bank 4;
+// Move Red Iron Knuckle in Palace 4 that has a very high Y-position so it doesn't fall the entire height of the screen. 
 org $8B64	// 0x10B74
 	db $79		// Enemy data from enemy in one of the Palaces(?)
 
@@ -113,11 +114,12 @@ org $A9F1	// 0x12A01
 //---------------------------------------------
 
 bank 5;
-// Repoint certain enemies for Great Palace
+// Add enemies to two previously empty rooms in Great Palace
+// 2 Firebird enemies to an elevator room, and Bagos to a bridge room
 org $85AD	// 0x145BD
 	dw $705F	// Originally $7000
 	dw $700E	// Originally $7000
-// Repoint certain enemy data for Great Palace 
+// Replace one of the two red potions before Thunderbird with a King Bot (in a similar position to one before this room)
 org $89BE	// 0x149CE
 	db $17,$DE
 
@@ -128,7 +130,7 @@ org $9435	// 0x15445
 
 // Enemy attributes for Great Palace
 org $94DB	// 0x155EB
-// Reduce experience points for Bubbles, Fokkas and King Bubble; add minimum experience for fodder enemies instead of being 0, and also disallow Experience stealing from all enemies in Palaces.
+// Modify experience points for Bubbles, Bagos, Ropes, Skull Heads, Fokkas, Firebirds and King Bubble; add minimum experience for fodder enemies instead of being 0, and also disallow Experience stealing from all enemies in Palaces.
 	db $C3,$C2,$C0,$D0
 	db $81,$00,$00,$82
 	db $C3,$05,$86,$86

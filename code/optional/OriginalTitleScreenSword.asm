@@ -3,9 +3,9 @@
 //********************************************************************
 
 bank 5;
-org $AF5A	// 0x16F6A
-// Restore a specific colour from the palette for the old Sword graphics
-	db $26
+org $AF58	// 0x16F68
+// Restore a specific colour from the palette for the old Sword graphics ($26), and improve the red shading ($05)
+	db $0F,$05,$26,$30	// Originally 0F 16 26 30
 
 bank 8;
 // Title screen graphics

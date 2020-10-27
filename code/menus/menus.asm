@@ -3,7 +3,7 @@
 //***********************************************************
 
 bank 0;
-// Change a blank red tile for arrow/comma one (?)
+// Change right black screen border on Overworld for PAUSE usage
 org $878C	// 0x0079C
 	lda.b #$9C	// Originally LDA #$FF
 // Change old Arrow tile for new one

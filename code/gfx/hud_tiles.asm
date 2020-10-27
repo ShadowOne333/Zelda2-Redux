@@ -25,7 +25,7 @@ org $968B	// 0x0169B
 
 // STUFF RELATED TO HUD
 org $96BD	// 0x016CD
-	lda.w $AB80,x	// Originally LDA $962E,X
+	lda.w l_AB80,x	// Originally LDA $962E,X
 
 org $96C5	// 0x016D5
 	cpx.b #$14	// Originally CPX #$13
@@ -40,7 +40,7 @@ org $9707	// 0x01717
 	sta.w $030D,y	// Originally STA $030C,Y
 
 org $972E	// 0x0173E
-	lda.w $AB50,x	// Originally LDA $9641,X
+	lda.w l_AB50,x	// Originally LDA $9641,X
 
 org $9736	// 0x01746
 	cpx.b #$1A	// Originally CPX #$18
@@ -65,8 +65,12 @@ org $9778	// 0x01768
 	lda.b $01
 	sta.w $0318,y	// Originally STA $0316,Y
 
+// Pointer for HUD PPU transfers table
+org $97CF	// 0x017DF
+	lda.w l_AB70,x	// Originally TAX, LDA #$0F
 // Repointed Experience points PPU transfers
 org $AB50	// 0x02B60
+l_AB50:
 	db $20,$58,$01
 	db "1"
 	db $20,$42,$12
@@ -75,6 +79,7 @@ org $AB70	// 0x02B80
 l_AB70:
 	db $0F,$0F
 org $AB80	// 0x02B90
+l_AB80:
 	db $20,$5B,$01
 	db "1"
 	db $20,$5E,$0C

@@ -6,7 +6,7 @@ bank 0;
 // Palette for Falling animation (Link's)
 org $A849	// 0x02859
 	db $0F,$07,$37,$2A	// Originally 0F 18 36 2A
-// Palette for Flashing Link
+// Magic Flash palette modifications for Anti-seizure measures
 org $A9F0	// 0x02A00
 	db $02,$03,$02,$03
 org $A9FA	// 0x02A0A
@@ -103,8 +103,13 @@ bank 7;
 // Modify Palette PPU transfer for new Link palette
 org $C453	// 0x1C463
 	db $0F,$07,$37,$2A	// Originally 0F 18 36 2A
-// Modify Overworld palettes for Link and Roaming Enemies
+// Modify Overworld palettes for Link, PAUSE and Roaming Enemies
 org $C46B	// 0x1C47B
 	db $0F,$07,$37,$2A	// Originally 0F 18 36 2A
 	db $0F,$30,$12,$0F	// Originally 0F 0F 0F 0F
 	db $0F,$30,$06,$12	// Originally 0F 30 16 0F
+
+// Death Flash palette modifications for Anti-seizure measures
+org $C9EA	// 0x1C9FA
+	db $07,$26,$07,$26,$20,$C5,$FF	// Originally 12 16 2A 16 20 C5 FF
+

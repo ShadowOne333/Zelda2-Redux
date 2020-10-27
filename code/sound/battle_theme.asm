@@ -5,11 +5,12 @@
 bank 0;
 // Jump to change overworld music
 org $8891	// 0x008A1
-	jsr $A8F0	// Originally LDA #$02, STA #$EB
+	jsr l_A8F0	// Originally LDA #$02, STA #$EB
 	nop
 
 // Overworld music change routine by IcePenguin
 org $A8F0	// 0x02900
+l_A8F0:
 	lda.w $0707	// Load current world
 	sta.w $0702	// Store at $0702
 	lda.b #$02	// Load music entry $02
@@ -17,7 +18,7 @@ org $A8F0	// 0x02900
 	rts
 
 	fill $05,$FF
-	
+l_A900:
 	ldx.w $0707	// Load current world
 	cpx.b #$00
 	bne world0	// BNE $07, Branch if not world $00
@@ -32,77 +33,14 @@ east:
 	sta.w $075F	// Music to play address
 	rts
 
-bank 5;
-org $BE20	// 0x17E30
-	jsr l_BE26
-	jmp l_BE3D
-l_BE26:
-	ldy.b #$02
-	ldx.b $F5
-	txa
-	and.b #$24
-	bne l_BE37	// BNE $08
-	dey
-	txa
-	and.b #$08
-	bne l_BE3A	// BNE $05
-	dey
-	rts
-l_BE37:
-	inc.b $19
-	rts
-l_BE3A:
-	dec.b $19
-	rts
-l_BE3D:
-	lda.b $19
-	and.b #$03
-	sta.b $19
-	tya
-	beq l_BE48	// BEQ $02
-	lda.b #$04
-l_BE48:
-	sta.b $EB
-	rts
-
-bank 7;
-// Related to the Battle Theme music
-org $CBAA	// 0x1CBBA
-	jsr l_FEAA	// Originally STA $0707
-org $CBC8	// 0x1CBD8
-	jsr l_FEB4	// Originally LDA #$04 (Load Battle theme)
-	nop		// Originally STA $075F (Music to play)
-	nop
-
-// Routine for loading new battle theme into East Hyrule
-org $FEAA	// 0x1FEBA
-l_FEAA:
-	sta.w $0707	// Store current world
-	lda.w $0707	// Load current world
-	sta.w $0702	// Store ???
-	rts
-l_FEB4:
-	lda.b #$02	// Load $02 into accumulator
-	cmp.w $0706	// Compare if we are at East Hyrule
-	beq l_FEC1	// BEQ $06, Branch if at East Hyrule
-	lda.b #$04	// Load normal battle theme ($04)
-	sta.w $075F	// Store into music address
-	rts
-l_FEC1:
-	lda.b #$08	// Load new battle theme ($08)
-	sta.w $075F	// Store into music address
-	lda.b #$00	// Load $00 into accumulator
-	sta.w $0702	// Store ???
-	rts
-
-
 bank 6;
 // Music data modifications
 org $9489	// 0x19499
-	jsr $9DC0
+	jsr l_9DC0
 	nop
 
 org $9DC0	// 0x19DD0
+l_9DC0:
 	lda.b #$02
 	cmp.w $0706	// Compare if current region = $02
 	beq l_9DCC	// BEQ $05, Branch to $9DCC
@@ -363,3 +301,38 @@ l_B3B1:		// 0x1B3C1
 	db $43,$B2,$AC,$A4,$B6,$AE,$A4,$3B
 	db $43,$08,$0A,$15,$15,$17,$19,$19
 	db $19,$1A,$00
+
+
+bank 7;
+// Move pointer to music data (and the data itself) 0x30 bytes below to avoid collide with Exp hacks
+org $C436	// 0x1C446
+	jsr l_A900	// Originally STA $075F
+// Related to the Battle Theme music
+org $CBAA	// 0x1CBBA
+	jsr l_FEAA	// Originally STA $0707
+org $CBC8	// 0x1CBD8
+	jsr l_FEB4	// Originally LDA #$04 (Load Battle theme)
+	nop		// Originally STA $075F (Music to play)
+	nop
+
+// Routine for loading new battle theme into East Hyrule
+org $FEAA	// 0x1FEBA
+l_FEAA:
+	sta.w $0707	// Store current world
+	lda.w $0707	// Load current world
+	sta.w $0702	// Store ???
+	rts
+l_FEB4:
+	lda.b #$02	// Load $02 into accumulator
+	cmp.w $0706	// Compare if we are at East Hyrule
+	beq l_FEC1	// BEQ $06, Branch if at East Hyrule
+	lda.b #$04	// Load normal battle theme ($04)
+	sta.w $075F	// Store into music address
+	rts
+l_FEC1:
+	lda.b #$08	// Load new battle theme ($08)
+	sta.w $075F	// Store into music address
+	lda.b #$00	// Load $00 into accumulator
+	sta.w $0702	// Store ???
+	rts
+

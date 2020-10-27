@@ -59,13 +59,13 @@ intro_02:
 intro_03:
 	db "ANCESTOR OF PRINCESS ZELDA. ",		{delay}
 intro_04:
-	db "SHE WILL WAKE ONLY WITH     ",		{delay}
+	db "SHE WILL AWAKE ONLY WITH    ",		{delay}
 intro_05:
-	db "THE POWER OF THE THIRD      ",		{delay}
+	db "THE POWER OF THE TRIFORCE   ",		{delay}
 intro_06:
-	db "TRIFORCE OF COURAGE SEALED  ",		{delay}
+	db "OF COURAGE SEALED WITHIN    ",		{delay}
 intro_07:
-	db "IN A TEMPLE IN HYRULE.      ",		{delay}
+	db "A TEMPLE IN HYRULE.         ",		{delay}
 intro_08:
 	db "                            ",		{delay}
 intro_09:

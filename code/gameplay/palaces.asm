@@ -1,9 +1,9 @@
 //***********************************************************
-// Palace changes (Unused windows changes for Palaces...?)
+//	Palace changes to implement unused Windows
 //***********************************************************
 
 bank 4;
-// Modify area pointer for Palace Type B
+// Modify data pointer for Palaces Type B 4 and 6 to implement the unused windows for those palaces
 org $A012	// 0x12022
 	dw $A541	// Originally $A163
 org $A042	// 0x12052
@@ -16,7 +16,7 @@ org $A078	// 0x12088
 	dw $A541	// Originally $7230 -> 10AD0
 
 // UNUSED SPACE
-// New area data for certain rooms in Palaces
+// New area data for certain rooms with windows in Palace 4
 org $A529	// 0x12539
 	db $18,$60,$80,$13
 	db $45,$00,$44,$00,$89,$05,$4A,$00
@@ -35,6 +35,7 @@ l_A565:
 	db $60,$01,$43,$00,$49,$00,$63,$02
 	db $D1,$0E
 
+// New area data for certain rooms with windows in Palace 6
 org $A75A	// 0x1276A
 	db $11,$60,$80,$12
 	db $BF,$70,$44,$00,$49,$00,$B4,$70
@@ -59,7 +60,7 @@ l_A78D:
 //***********************************************************
 
 bank 5;
-// Great Palace area data modifications
+// Great Palace intersecting-paths area data modifications
 org $8A86	// 0x14A96
 	db $A0,$3E
 

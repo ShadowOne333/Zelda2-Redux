@@ -180,8 +180,8 @@ text_14:
 	db "THAT'S THE",{line}
 	db "GODDESS",	{line}
 	db "STATUE!",	{delay}
-	db "GO SEE",	{line}
-	db "GRANDPA!",	{end}
+	db "COME SEE",	{line}
+	db "MY GRANDPA!",{end}
 
 //----------------------------------------
 
@@ -196,12 +196,12 @@ text_15:
 //----------------------------------------
 
 text_16:	// Repoint 2, 0xEFEE
-	db "I DON'T",	{line}
-	db "HAVE MORE",	{line}
-	db "TO TEACH",	{line}
-	db "YOU. GO,",	{line}
-	db "AND TAKE",	{line}
-	db "CARE.",	{end}
+	db "I HAVE",	{line}
+	db "NOTHING",	{line}
+	db "MORE TO ",	{line}
+	db "TEACH YOU.",{line}
+	db "GO NOW AND",{line}
+	db "TAKE CARE.",{end}
 
 //----------------------------------------
 
@@ -250,8 +250,10 @@ text_21:
 //----------------------------------------
 
 text_22:
-	db "I LOST",	{line}
-	db "MY MIRROR.",{end}
+	db "I LOST MY",	{line}
+	db "MIRROR",	{line}
+	db "SOMEWHERE",	{line}
+	db "IN TOWN.",	{end}
 
 //----------------------------------------
 
@@ -301,10 +303,10 @@ text_27:
 text_28:
 	db "GANON'S",	{line}
 	db "MINIONS",	{line}
-	db "HAVE",	{line}
-	db "SLIPPED",	{line}
-	db "INTO TOWN",	{line}
-	db "CROWDS.",	{end}
+	db "ARE HIDDEN",{line}
+	db "AMONG THE",	{line}
+	db "CROWDS IN",	{line}
+	db "THE TOWN.",	{end}
 
 //----------------------------------------
 
@@ -353,8 +355,8 @@ text_34:
 	db "BEFORE",	{line}
 	db "LEAVING,",	{line}
 	db "COME TO",	{line}
-	db "MY HOUSE",	{line}
-	db "AND SEE",	{line}
+	db "THE HOUSE",	{line}
+	db "AND SEE MY",{line}
 	db "GRANDPA.",	{end}
 
 //----------------------------------------
@@ -364,7 +366,7 @@ text_35:
 	db "YOU THE",	{line}
 	db "MAGIC TO",	{line}
 	db "RESTORE",	{line}
-	db "LIFE.",	{end}
+	db "YOUR LIFE.",{end}
 
 //----------------------------------------
 
@@ -397,11 +399,11 @@ text_38:
 //----------------------------------------
 
 text_39:
-	db "THE RAFT",	{line}
-	db "IS IN THE",	{line}
-	db "ISLE TEMPLE",{line}
-	db "TO THE",	{line}
-	db "SOUTH.",	{end}
+	db "THERE'S A",	{line}
+	db "RAFT IN",	{line}
+	db "THE ISLE",	{line}
+	db "TEMPLE TO",	{line}
+	db "THE SOUTH.",{end}
 
 //----------------------------------------
 
@@ -603,9 +605,9 @@ text_63:	// Repoint 8, 0xF04C
 //----------------------------------------
 
 text_64:
-	db "SEE THE",	{line}
-	db "SAGE AT",	{line}
-	db "DARUNIA",	{line}
+	db "LEARN FROM",{line}
+	db "THE SAGE",	{line}
+	db "IN DARUNIA",{line}
 	db "BEFORE YOU",{line}
 	db "GO TO MAZE",{line}
 	db "ISLAND.",	{end}
@@ -647,10 +649,12 @@ text_68:
 //----------------------------------------
 
 text_69:
-	db "I WON'T",	{line}
+	db "I WILL",	{line}
 	db "TEACH YOU",	{line}
-	db "UNTIL YOU",	{line}
-	db "ARE READY.",{end}
+	db "ONCE YOU",	{line}
+	db "ARE ABLE",	{line}
+	db "TO CONTAIN",{line}
+	db "MORE MAGIC.",{end}
 
 //----------------------------------------
 
@@ -659,15 +663,16 @@ text_70:
 	db "WILL MAKE",	{line}
 	db "YOUR SWORD",{line}
 	db "SHOOT FIRE.",{end}
+
 //----------------------------------------
 
 text_71:
-	db "I DON'T",	{line}
-	db "HAVE MORE",	{line}
-	db "TO TEACH",	{line}
-	db "YOU. GO,",	{line}
-	db "AND TAKE",	{line}
-	db "CARE.",	{end}
+	db "I HAVE",	{line}
+	db "NOTHING",	{line}
+	db "MORE TO ",	{line}
+	db "TEACH YOU.",{line}
+	db "GO NOW AND",{line}
+	db "TAKE CARE.",{end}
 
 //----------------------------------------
 
@@ -688,11 +693,19 @@ text_73:
 //----------------------------------------
 
 text_74:
+	db "A MESSAGE.",{line}
+	db "IT READS...",{delay}
 	db "THE MAGIC",	{line}
-	db "KEY, IT",	{line}
-	db "READS...",	{delay}
+	db "KEY...",	{line}
 	db "TREASURE",	{line}
 	db "OF KASUTO.",{end}
+
+//----------------------------------------
+// Fill out remaining space before pointers
+	fillto $AFBD,$FF
+// Continue at free space for remaining text
+
+	org $B810	// 0x0F820
 
 //----------------------------------------
 
@@ -701,12 +714,6 @@ text_75:
 	db "FALSE WALLS",{line}
 	db "IN THE",	{line}
 	db "TEMPLE!",	{end}
-
-//----------------------------------------
-// Fill out remaining space before pointers
-	fillto $AFBD,$FF
-// Continue at free space for remaining text
-	org $B810	// 0x0F820
 
 //----------------------------------------
 
@@ -779,8 +786,8 @@ text_83:	// Repoint 11, 0xF074
 	db "EVERYONE",	{line}
 	db "FLED FROM",	{line}
 	db "KASUTO WHEN",{line}
-	db "THE MINIONS",{line}
-	db "OF GANON",	{line}
+	db "GANON'S",	{line}
+	db "MINIONS",	{line}
 	db "ATTACKED.",	{end}
 
 //----------------------------------------

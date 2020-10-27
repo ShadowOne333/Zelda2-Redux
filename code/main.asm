@@ -27,18 +27,18 @@ header			// rom has a header
 	db $00,$00,$00,$00
 
 //****************************************
-//	Redux changes
-//****************************************
-incsrc code/redux.asm			// Main ASM code for Redux
-
-//****************************************
 //	Gameplay changes
 //****************************************
 incsrc code/gameplay/enemies.asm	// Enemy attributes and HPs changes
+incsrc code/gameplay/manual_save.asm	// Save manually by pressing Pause and then Up+A (Button combo can be modified)
 incsrc code/gameplay/misc.asm		// Miscellaneous hacks
 incsrc code/gameplay/palaces.asm	// Palaces (and Great Palace) modifications
+incsrc code/gameplay/permanent_dolls.asm	// Obtaining a Link Doll adds one life permanently to the Lives Counter
 incsrc code/gameplay/restart_palace.asm	// Restart at Palace entrance on Game Over (by njosro)
+incsrc code/gameplay/saria_bridge.asm	// Bridge at Saria draws automatically after showing the guard the letter for the 1st time
 incsrc code/gameplay/tunic.asm		// Make Shield spell change tunic to Blue and Red
+incsrc code/gameplay/overworld_animation.asm	// Code to allow for the extra CHR banks to be used for animation in the overworld
+incsrc code/gameplay/overworld_pause.asm	// PAUSE message for the overworld (like in the GBA re-release)
 incsrc code/menus/file_select.asm	// Modifications to the File Select menus
 incsrc code/sound/battle_theme.asm	// FDS Battle Theme in East Hyrule
 
@@ -58,6 +58,7 @@ incsrc code/gfx/hud_hearts.asm		// Life Meter with Hearts in HUD
 incsrc code/gfx/hud_tiles.asm		// HUD layout modifications
 incsrc code/gfx/palettes.asm		// Several palette changes
 incsrc code/gfx/title_screen.asm	// Title screen changes
+incsrc code/menus/lives_counter.asm	// Change the Life Counter to cap out at 9 lives (RAM still counts up to 15 or $0F)
 incsrc code/menus/menus.asm		// Character or tile changes for Menus
 incsrc code/menus/panes.asm		// Changes to the Pause and Level-Up panes
 

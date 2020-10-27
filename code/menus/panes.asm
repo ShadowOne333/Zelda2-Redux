@@ -171,30 +171,3 @@ l_9D32:		// 0x01D42
 l_9D40:		// 0x01D50
 	db $CC,"            ",$CC	// GO UP, Empty
 
-// Pause pane counters related to Crystals and Lives
-org $A156	// 0x02166
-	sta.w $7896	// Originally STA $7881
-org $A15F	// 0x0216F
-	sta.w $7897
-	jsr l_AC60
-	clc
-	adc.b #$CF	// Change to dot tile?
-	sta.w $7898
-
-// Force Lives counter to print out max number of 9
-org $AC60	// 0x02C70
-l_AC60:
-	lda.w $079E
-	lda.w $0700	// Load current number of lives
-	sta.w $079E
-	lda.b #$09
-	cmp.w $079E
-	bpl decrement	// BPL $06, Branch on plus to
-	lda.b #$0A
-	sta.w $079E
-	rts
-decrement:
-	inc.w $079E
-	lda.w $079E
-	dec.w $079E
-	rts

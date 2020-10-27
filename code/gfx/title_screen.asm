@@ -7,8 +7,9 @@ org $A7C5	// 0x167D5
 	db $2F,$03,$22,$28	// Intro sprites changes
 org $A7E5	// 0x167F5
 	db $2F,$05,$22,$30	// Intro sprites changes
+// Shooting Star sprite priority change to not appear above the letter "N" of "LINK" ($78) 
 org $A8B9	// 0x168C9
-	db $90		// ($78) Shooting Star sprites changes
+	db $90
 
 // Flip palette mapping for the intro text, so the copyright text in the new row uses the proper colour
 org $AB19	// 0x16B29
