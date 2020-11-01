@@ -33,9 +33,9 @@ if [ -f "$clean_rom" ]; then
 	echo "Base ROM detected with proper name. Checking SHA-1..."; else
 	export error="Base ROM was not found. Place the 'Zelda\ II\ -\ The\ Adventure\ of\ Link\ \(USA\).nes' ROM inside the 'rom' folder." && jumpto ERROR; fi
 
-export	md5=$(sha1sum "$clean_rom" | awk '{ print $1 }')
+export	sha1=$(sha1sum "$clean_rom" | awk '{ print $1 }')
 
-if [ "$md5" == "$checksum" ]; then
+if [ "$sha1" == "$checksum" ]; then
 	echo "Base ROM SHA-1 checksum verified. Patching..."; else
 	export error="Base ROM checksum is incorrect. Use a Zelda 2 ROM with the proper SHA-1 checksum for patching." && jumpto ERROR; fi
 
