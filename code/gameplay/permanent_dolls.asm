@@ -11,10 +11,6 @@ org $C358	// 0x1C368
 	nop		// STA $0700
 	nop
 
-// Related to the number of lives for Link Dolls hack
-org $CA9C	// 0x1CAAC
-	jsr l_D3A0	// Originally LDA $079F
-
 // Initialize unused RAM $0795 at $03 for the Permanent Link Dolls
 org $D3B0	// 0x1D3C0
 l_D3B0:

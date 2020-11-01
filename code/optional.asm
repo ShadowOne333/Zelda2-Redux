@@ -42,7 +42,7 @@
 //incsrc code/optional/OriginalTitleScreenSword.asm
 
 // Random Battle Theme, changing between FDS and NES ones
-//incsrc code/sound/random_battle_theme.asm
+//incsrc code/optional/RandomBattleTheme.asm
 
 // Reduce lag in-game - Reduces number of enemies on-screen
 //incsrc code/optional/ReduceLag.asm
@@ -62,4 +62,5 @@
 
 // Static experience points while placing each Palace Crystal
 //incsrc code/optional/StaticExpAtPalaceCrystal.asm
+
 

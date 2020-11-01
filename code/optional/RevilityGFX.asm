@@ -1,8 +1,8 @@
-//*******************************************************************
+//***************************************************************
 //		New GFX (by darthvaderx)
-// Combines assets from Rev Edition (Revility) and
-// New Link Sprites (Falchion22) into Zelda 2 Redux
-//******************************************************************* 
+//	Combines assets from Rev Edition (Revility) and
+//	New Link Sprites (Falchion22) into Zelda 2 Redux
+//*************************************************************** 
 
 bank 0;
 // Palette for Falling Animation

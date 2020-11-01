@@ -20,15 +20,15 @@ l_A8F0:
 	fill $05,$FF
 l_A900:
 	ldx.w $0707	// Load current world
-	cpx.b #$00
+	cpx.b #$00	// Compare with $00 (Caves or Encounter)
 	bne world0	// BNE $07, Branch if not world $00
 	ldx.w $0706	// Load current region (East/West Hyrule)
 	cpx.b #$02	// Compare if its $02 (East Hyrule)
 	beq east	// BEQ $04
-world0:
+world0:		// $A90E, 0x0291E
 	sta.w $075F	// Music to play address
 	rts
-east:
+east:		// $A912, 0x02922
 	lda.b #$08	// Load music entry $08
 	sta.w $075F	// Music to play address
 	rts

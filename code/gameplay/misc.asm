@@ -25,6 +25,7 @@ org $87CB	// 0x008DB
 
 bank 0;
 org $8D7B	// 0x00D8B
+// Magic consumption table
 	db $20,$18,$18,$10,$10,$10,$10,$10	// Shield
 	db $30,$28,$20,$20,$18,$10,$0C,$08	// Jump
 	db $48,$48,$40,$40,$30,$30,$30,$30	// Life
@@ -55,8 +56,10 @@ l_A8B0:
 	rts
 fairy_cancel:	// Fairy Cancel routine
 	lda.b #$00	// Load human state ($00)
-	sta.b $13	// Store at RAM $13
-	sta.w $076F	// Store at RAM $076F
+	sta.b $13	// Store at RAM $13 (Fairy State 1)
+	sta.w $076F	// Store at RAM $076F (Fairy State 2)
+	sta.w $057D	// Store at RAM $057D (Y Velocity 1)
+	sta.w $03E6	// Store at RAM $03E6 (Y Velocity 2)
 	rts
 
 //***********************************************************

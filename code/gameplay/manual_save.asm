@@ -5,8 +5,10 @@
 // Button values for remapping purposes:
 // FOR RAM ADDRESSES LOADED FROM $F5/$F7
 
-// 01 = D-Pad Right	| 02 = D-Pad Left	| 04 = D-Pad Down	| 08 = D-Pad Up
-// 10 = Start Button	| 20 = Select Button	| 40 = B Button		| 80 = A Button
+// 01 = D-Pad Right	| 02 = D-Pad Left
+// 04 = D-Pad Down	| 08 = D-Pad Up
+// 10 = Start Button	| 20 = Select Button
+// 40 = B Button	| 80 = A Button
 
 bank 0;
 // Change save input from controller 2 to controller 1
@@ -28,11 +30,14 @@ l_AB96:
 
 bank 7;
 // Manual save fix so the game doesn't count saves as Deaths
+org $CA9C	// 0x1CAAC
+// Hijack for the manual save fix 
+	jsr l_D3A0	// Originally LDA $079F
 org $D3A0	// 0x1D3B0
 l_D3A0:
 	lda.w $0700	// Load number of lives
-	beq l_D3A8	// Branch if equal to $00
-	lda.b #$FF	// Load $FF into accumulator
+	beq l_D3A8	// If A=0 (Lives=0), branch to original code
+	lda.b #$FF	// Set A to 255
 	rts
 l_D3A8:
 	lda.w $079F	// Load number of continues used
