@@ -49,7 +49,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 * Palaces renamed to Temples for consistency with the rest of the series
 * Enemies no longer steal experience from you. (Don't confuse this with Magic, some still steal magic)
 * Reduced the amount of HP the Bubble (and Giant Bubble) enemies have, as well as their Exp. Should now go down with like 10 Sword swings instead of a damn million (having FF in their lives was really something stupid for such a meaningless enemy), and they have also been made non-respawnable to avoid abusing grinding of these enemies, since their low EXP could still be abused
-* Reduced the amount of magic consumption by half for all levels
+* Reduced the amount of magic consumption to around 2/3s or half for all levels and spells
+* Fairy Spell transformation can be cancelled at any time by pressing the A button to transform back into Human Link
 * More common enemy drops
 * All enemies give out Exp
 * Enemies rebalanced according to their strength and annoyance factor (Those Modafokkas are no joke)
@@ -105,6 +106,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 * **Original Title Screen Palette.ips**		- Restores only the palette of the original Title Screen from Zelda II, keeping the new Sword
 
 * **Original Title Screen Sword.ips**		- Restores only the sword of the original Title Screen from Zelda II, keeping the new palette
+
+* **Random Battle Theme.ips**				- Modifies the way in which the FDS/NES Battle Themes are used from the standard Zelda 2 Redux. With this patch, instead of having the FDS Battle Theme play on East Hyrule, now the game will load either the NES or FDS Battle Themes at random in all encounters.
 
 * **Reduce Lag.ips**				- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
 
@@ -163,6 +166,7 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **IcePenguin** - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
 * **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
+* **Cyneprepou4uk** - For his help and polish on some ASM routines
 * **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
