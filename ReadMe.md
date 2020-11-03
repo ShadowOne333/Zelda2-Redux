@@ -139,9 +139,7 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
 ## TO-DO
 
-* Keep Exp at Game Over should have a variant to make the Exp be saved per file on game reboot, or integrate it into the same optional patch
-* Restart at Same Screen should save/load whatever max number of Link dolls the player has at the moment
-* Copy/Erase save file Menu overhaul by DarkSamus993 pending for main Redux patch
+* Implementation of a Copy/Erase save file system overhaul, like in subsequent Zeldas, by DarkSamus993 pending for main Redux patch. i.e. D-Pad Up and Down control the cursor in the File Selection and pressing A brings up the Name screen in an Empty File, and the other two options should be Copy/Erase. (Example: ALttP or OoT Copy/Erase save file)
 
 -------------------
 

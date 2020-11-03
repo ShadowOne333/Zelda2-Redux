@@ -36,10 +36,10 @@
 //incsrc code/optional/OriginalTitleScreen.asm
 
 // Original Zelda 2 Title Screen Sword with New Palette
-//incsrc code/optional/OriginalTitleScreenPalette.asm
+//incsrc code/optional/OriginalTitleScreenSword.asm
 
 // Original Zelda 2 Title Screen Palette with New Redux Sword
-//incsrc code/optional/OriginalTitleScreenSword.asm
+//incsrc code/optional/OriginalTitleScreenPalette.asm
 
 // Random Battle Theme, changing between FDS and NES ones
 //incsrc code/optional/RandomBattleTheme.asm
