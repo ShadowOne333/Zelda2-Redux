@@ -142,3 +142,4 @@ bank 8;
 // Import the new graphics
 org $20000	// 0x020000
 	incbin code/optional/NewGFX.bin
+

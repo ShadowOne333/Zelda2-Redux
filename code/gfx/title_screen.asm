@@ -18,9 +18,9 @@ org $AB19	// 0x16B29
 // Change palette for the sword and rocks, respectively
 org $AF40	// 0x16F50
 	db $0F,$30,$1C,$06	// Originally 0F 30 1C 15
-	db $0F,$16,$0F,$08	// Originally 0F 2B 0F 00
+	db $0F,$17,$0F,$08	// Originally 0F 2B 0F 00
 org $AF54	// 0x16F64
-	db $0F,$16,$0F,$08	// Originally 0F 2B 0F 00
+	db $0F,$17,$0F,$08	// Originally 0F 2B 0F 00
 	db $0F,$16,$10,$30	// Originally 0F 16 26 30
 
 // Tile fixes for Title screen new graphics

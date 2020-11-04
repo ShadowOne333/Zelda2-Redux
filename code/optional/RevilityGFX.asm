@@ -117,10 +117,10 @@ org $80CE	// 0x0140DE
 	db $FF,$07,$37,$29	// Originally [FF 18 36 2A]
 // Palettes for Intro
 org $AF40	// 0x016F50
-	db $0F,$28,$11,$16	// Originally [0F 30 1C 15]
-	db $0F,$27,$0F,$07	// Originally [0F 2B 0F 00]
+	db $0F,$30,$11,$16	// Originally [0F 30 1C 15]
+	db $0F,$27,$0F,$08	// Originally [0F 2B 0F 00]
 org $AF54	// 0x016F64
-	db $0F,$27,$0F,$07	// Originally [0F 2B 0F 00]
+	db $0F,$27,$0F,$08	// Originally [0F 2B 0F 00]
 	db $0F,$0C,$00,$30	// Originally [0F 16 26 30]
 // Palette for Selection Screen (Link)
 org $BC08	// 0x017C18
