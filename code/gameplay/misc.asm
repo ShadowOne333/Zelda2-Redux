@@ -42,11 +42,11 @@ org $8D7B	// 0x00D8B
 bank 0;
 // Hijack original Fairy routine
 org $91AA	// 0x011BA
-	jsr l_A8B0	// Originally LDA #$08
+	jsr l_A920	// Originally LDA #$08
 	nop		// Originally STA $13
 
-org $A8B0	// 0x028C0
-l_A8B0:
+org $A920	// 0x02930
+l_A920:
 	lda.b $F5	// Load controller 1 inputs
 	cmp.b #$80	// Compare if Button A is pressed
 	beq fairy_cancel	// Branch to Fairy Cancel if A is pressed

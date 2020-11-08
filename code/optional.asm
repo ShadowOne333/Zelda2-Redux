@@ -10,12 +10,12 @@
 // (Doesn't carry over on Reboot!)
 //incsrc code/optional/KeepExpAtGameOver.asm
 
+// New Experience system
+//incsrc code/optional/NewExp.asm
+
 // New Graphics based on Rev Edition & New Link hacks
 // CANNOT BE COMBINED WITH REVILITY'S GFX HACK!!!
 //incsrc code/optional/NewGFX.asm
-
-// New Experience system
-//incsrc code/optional/NewExp.asm
 
 // Original Zelda 2 enemy attributes (Exp, HP, Respawn)
 //incsrc code/optional/OriginalEnemyAttributes.asm
@@ -47,8 +47,14 @@
 // Reduce lag in-game - Reduces number of enemies on-screen
 //incsrc code/optional/ReduceLag.asm
 
+// Reduce the Text printing sound made from Dialog boxes
+//incsrc code/optional/ReduceTextSound.asm
+
 // Remove the low health beeping
 //incsrc code/optional/RemoveLowHealthBeep.asm
+
+// Remove the Text printing sound made from Dialog boxes
+//incsrc code/optional/RemoveTextSound.asm
 
 // Restart on the same screen after a Game Over
 //incsrc code/optional/RestartSameScreenAtGameOver.asm

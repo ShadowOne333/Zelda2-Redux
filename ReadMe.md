@@ -111,7 +111,11 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Reduce Lag.ips**				- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
 
+* **Reduce Text Sound.ips**			- Modifies the sound effect that plays when each character is parsed/written in the Dialog/Text box, to another sound effect that isn't as intrusive or noisy due to the increased text speed.
+
 * **Remove Low Health Beep.ips**		- Removes the sound that starts playing constantly when Link is at low health.
+
+* **Remove Text Sound.ips**			- Completely removes the sound effect that plays when each character is parsed/written in the Dialog/Text box.
 
 * **Revility Edition Sprites**			- New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 
