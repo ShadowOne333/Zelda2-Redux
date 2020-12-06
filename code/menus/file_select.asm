@@ -116,6 +116,7 @@ l_B3A1:
 
 	fillto $B3CF,$FF
 
+
 // Elimination mode Cursor Up/Down (by D-man/Cyneprepou4uk)
 org $B4A6	// 0x174B6
 l_B4A6:
@@ -144,6 +145,7 @@ l_B4BC:
 l_B4CD:
 	db $01,$FF,$01,$FF
 	db $FF,$FF,$FF,$FF
+
 org $BE20	// 0x17E30
 l_BE20:
 	jsr l_BE26
@@ -214,9 +216,9 @@ org $BD3B	// 0x17D4B
 org $BD8F	// 0x17D9F
 	db $CE
 
-// UNUSED SPACE, Possible code for the new Battle Theme?
+// UNUSED SPACE
 org $BDB0	// 0x17DC0
-	and.b #$20
+	and.b #$20	// Check if Select was pressed
 	beq l_BDC3	// BEQ $10, Branch to $BDC3
 	lda.b #$04
 	sta.b $EB

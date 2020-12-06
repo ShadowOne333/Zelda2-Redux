@@ -47,14 +47,17 @@
 // Reduce lag in-game - Reduces number of enemies on-screen
 //incsrc code/optional/ReduceLag.asm
 
-// Reduce the Text printing sound made from Dialog boxes
-//incsrc code/optional/ReduceTextSound.asm
+// Change the Sound that plays when getting minor item (P-Bag, Magic Jar, etc.)
+//incsrc code/optional/ChangeMinorItemSound.asm
 
-// Remove the low health beeping
-//incsrc code/optional/RemoveLowHealthBeep.asm
+// Change the Text printing sound made from Dialog boxes
+//incsrc code/optional/ChangeTextSound.asm
 
 // Remove the Text printing sound made from Dialog boxes
 //incsrc code/optional/RemoveTextSound.asm
+
+// Remove the low health beeping
+//incsrc code/optional/RemoveLowHealthBeep.asm
 
 // Restart on the same screen after a Game Over
 //incsrc code/optional/RestartSameScreenAtGameOver.asm
