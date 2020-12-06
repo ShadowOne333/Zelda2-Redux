@@ -85,6 +85,10 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 ## Optional patches
 
+* **Change Minor Item SFX.ips**			- Modifies the sound effect that plays when you grab a minor item, like a P-bag, magic jar, etc., so the game doesn't use the SFX as the Sword beam.
+
+* **Change Text Sound.ips**			- Modifies the sound effect that plays when each character is parsed/written in the Dialog/Text box, to another sound effect that isn't as intrusive or noisy due to the increased text speed.
+
 * **FDS King's Tomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
@@ -110,8 +114,6 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 * **Random Battle Theme.ips**				- Modifies the way in which the FDS/NES Battle Themes are used from the standard Zelda 2 Redux. With this patch, instead of having the FDS Battle Theme play on East Hyrule, now the game will load either the NES or FDS Battle Themes at random in all encounters.
 
 * **Reduce Lag.ips**				- Reduces the amount of enemies that the spawner can put on-screen from 5 to 2, so that the lag caused by the number of sprites is greatly reduced.
-
-* **Reduce Text Sound.ips**			- Modifies the sound effect that plays when each character is parsed/written in the Dialog/Text box, to another sound effect that isn't as intrusive or noisy due to the increased text speed.
 
 * **Remove Low Health Beep.ips**		- Removes the sound that starts playing constantly when Link is at low health.
 
