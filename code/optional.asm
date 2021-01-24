@@ -66,6 +66,9 @@
 // CANNOT BE COMBINED WITH NEW GFX HACK!!!
 //incsrc code/optional/RevilityGFX.asm
 
+// Rework the Title Screen to match the logo of recent Zelda titles
+//incsrc code/optional/ReworkedTitleScreen.asm
+
 // Secret... ???
 //incsrc code/optional/Secret.asm
 

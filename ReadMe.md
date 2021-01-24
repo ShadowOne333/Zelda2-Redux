@@ -121,6 +121,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Revility Edition Sprites**			- New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 
+* **Reworked Title Screen**			- Rework the Title Screen to to match the title screen logos of recent Zelda titles.
+
 * **Restart Same Screen At GameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
 This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
