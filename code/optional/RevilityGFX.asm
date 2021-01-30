@@ -143,3 +143,38 @@ bank 8;
 org $20000	// 0x020000
 	incbin code/optional/RevilityGFX.bin
 
+
+bank 3;
+// Text changes to match new item graphics for Rev and NewGFX
+//----------------------------------------
+org $E4CA	// 0x0E4DA
+//text_10:	// 3 less characters
+	db "ONLY WITH",	{line}
+	db "BOMBS YOU",	{line}
+	db "CAN BREAK",	{line}
+	db "ROCKS",	{line}
+	db "BLOCKING",	{line}
+	db "THE WAY...",{end}
+	db $FF,$FF,$FF
+//----------------------------------------
+org $E62A	// 0x0E63A
+//text_17:	// 1 less character
+	db "THERE ARE",	{line}
+	db "BOMBS AT",	{line}
+	db "DEATH",	{line}
+	db "MOUNTAIN'S",{line}
+	db "SPECTACLE",	{line}
+	db "ROCK...",	{end}
+	db $FF
+//----------------------------------------
+org $E7C1	// 0x0E7D1
+//text_27:	// 25-19=6 less characters
+	db "THE TEMPLE",{line}
+	db "IN MIDORO",	{line}
+	db "SWAMP HAS",	{line}
+	db "A SACRED",	{line}
+	db "BRACELET.",	{end}
+	db $FF,$FF,$FF,$FF,$FF,$FF
+
+
+
