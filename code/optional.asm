@@ -14,7 +14,7 @@
 //incsrc code/optional/NewExp.asm
 
 // New Graphics based on Rev Edition & New Link hacks
-// CANNOT BE COMBINED WITH REVILITY'S GFX HACK!!!
+// CANNOT BE COMBINED WITH REVILITY'S GFX NOR ORIGINAL GFX HACKS!!!
 //incsrc code/optional/NewGFX.asm
 
 // Original Zelda 2 enemy attributes (Exp, HP, Respawn)
@@ -28,6 +28,10 @@
 
 // Original Zelda 2 behaviour when getting a Game Over 
 //incsrc code/optional/OriginalRestartAtGameOver.asm
+
+// Original Zelda 2 NES graphics
+// CANNOT BE COMBINED WITH REVILITY'S GFX NOR NEW GFX HACKS!!!
+//incsrc code/optional/OriginalGFX.asm
 
 // Original Zelda 2 magic consumption
 //incsrc code/optional/OriginalSpellMagicConsumption.asm
@@ -63,7 +67,7 @@
 //incsrc code/optional/RestartSameScreenAtGameOver.asm
 
 // New Graphics based on Revility's Edition
-// CANNOT BE COMBINED WITH NEW GFX HACK!!!
+// CANNOT BE COMBINED WITH NEW GFX NOR ORIGINAL GFX HACKS!!!
 //incsrc code/optional/RevilityGFX.asm
 
 // Rework the Title Screen to match the logo of recent Zelda titles

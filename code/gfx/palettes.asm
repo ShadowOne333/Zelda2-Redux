@@ -23,16 +23,16 @@ org $8052	// 0x04062
 	db $0F,$27,$18,$08	// Originally 0F 17 07 08
 // Palette for Link in West Hyrule (Grass, Desert, Swamp, Graveyard, Lava)
 org $809E	// 0x040AE
-	db $FF,$07,$37,$2A	// Originall FF 18 36 2A
+	db $FF,$07,$37,$2A	// Originally FF 18 36 2A
 // Palette for Link in Forest
 org $80AE	// 0x040BE
-	db $FF,$07,$37,$2A	// Originall FF 18 36 2A
+	db $FF,$07,$37,$2A	// Originally FF 18 36 2A
 // Palette for Link at other locations
 org $80BE	// 0x040CE
-	db $FF,$07,$37,$2A	// Originall FF 18 36 2A
+	db $FF,$07,$37,$2A	// Originally FF 18 36 2A
 // Palette for Link at other locations
 org $80CE	// 0x040DE
-	db $FF,$07,$37,$2A	// Originall FF 18 36 2A
+	db $FF,$07,$37,$2A	// Originally FF 18 36 2A
 
 
 bank 2;
