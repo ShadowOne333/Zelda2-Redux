@@ -97,7 +97,9 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **New GFX.ips**				- Completely revamped graphics courtesy of darthvaderx, based on the graphics used in the "Rev Edition" and "New Link Sprites" hacks.
 
-* **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game.
+* **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game. (Note: This fixes the bugged Orange/Red Lizalfos from the original game too)
+
+* **Original Enemy Drops.ips**			- Zelda 2 Redux handles an enemy kill counter of 5 for each item dropped from killing enemies. This restores the enemy kill counter to 6, the same as the original Zelda 2.
 
 * **Original Link Dolls.ips**			- As the name implies, this restores the functionality of the Zelda II Link dolls to be the same as in the original Zelda II, meaning they won't be permanent lives anymore.
 
