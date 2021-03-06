@@ -4,7 +4,7 @@
 
 bank 1;
 // Original Experience Points and Steal Experience (Exp)
-org $94D5	// $054E5
+org $54D5	// $054E5
 	db $40,$40,$40,$C2,$C1,$81,$94,$C2
 	db $80,$90,$84,$10,$10,$81,$C2,$02
 	db $92,$84,$84,$40,$44,$85,$C5,$48
@@ -24,7 +24,7 @@ org $94D5	// $094E5
 
 bank 4;
 // Original Hit Points (HP)
-org $9421	// $11421
+org $11421	// $11421
 	db $00,$00,$00,$03,$04,$FF,$FA,$10
 	db $00,$00,$38,$02,$02,$FA,$FA,$08
 	db $08,$0C,$0C,$00,$00,$00,$00,$00
@@ -32,7 +32,7 @@ org $9421	// $11421
 	db $20,$30,$50,$0C
 
 // Original Experience Points and Steal Experience (Exp)
-org $94D5	// $114E5
+org $114D5	// $114E5
 	db $40,$40,$40,$C2,$C1,$80,$87,$57
 	db $C0,$C0,$D5,$00,$50,$80,$87,$00
 	db $93,$C5,$C5,$40,$00,$00,$00,$00
@@ -40,7 +40,7 @@ org $94D5	// $114E5
 	db $87,$CA,$C0,$C7
 
 // Original Respawn rate
-org $9541	// $11551
+org $11541	// $11551
 	db $96,$86,$96,$46,$46,$86,$46,$40
 	db $90,$86,$40,$80,$40,$90,$46,$90
 	db $06,$06,$06,$90,$90,$90,$90,$90
@@ -48,7 +48,7 @@ org $9541	// $11551
 	db $C0,$C0,$80,$00
 
 // Original Hit Points (HP)
-org $A921	// $12931
+org $12921	// $12931
 	db $00,$00,$00,$03,$04,$FF,$FA,$10
 	db $00,$00,$08,$02,$02,$02,$FA,$38
 	db $08,$0C,$0C,$00,$00,$00,$00,$00
@@ -56,7 +56,7 @@ org $A921	// $12931
 	db $48,$C0,$10,$20
 
 // Original Experience Points and Steal Experience (Exp)
-org $A9D5	// $129E5
+org $129D5	// $129E5
 	db $40,$40,$40,$C3,$C1,$80,$87,$57
 	db $C0,$C0,$CC,$00,$50,$80,$87,$D5
 	db $83,$C5,$C5,$40,$00,$00,$00,$00
@@ -65,7 +65,7 @@ org $A9D5	// $129E5
 
 bank 5;
 // Original Hit Points (HP)
-org $9421	// $15431
+org $15421	// $15431
 	db $00,$00,$00,$18,$30,$FF,$06,$04
 	db $00,$00,$02,$02,$02,$04,$06,$08
 	db $08,$0C,$0C,$00,$FF,$FF,$60,$FF
@@ -73,9 +73,17 @@ org $9421	// $15431
 	db $00,$00,$C0,$F8
 
 // Original Experience Points and Steal Experience (Exp)
-org $94D5	// $154E5
+org $154D5	// $154E5
 	db $40,$40,$40,$C4,$C4,$84,$D3,$C2
 	db $C0,$D0,$80,$00,$00,$82,$C3,$05
 	db $95,$85,$85,$40,$C5,$C5,$55,$C0
 	db $48,$88,$C9,$90,$90,$8B,$C0,$02
 	db $02,$02,$CF,$4A
+
+bank 7;
+// Allow Moa & Bago to steal Exp
+org $1E2FD	// 0x1E30D
+	lda.b #$0A	// Originally LDA #$0A
+	cpy.b #$06	// Check if Enemy = $06 (Moa)
+	bne $02		// BNE $02
+	lda.b #$14	// Originally LDA #$14

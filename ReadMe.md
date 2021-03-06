@@ -145,6 +145,8 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
 * **Secret.ips**				- ???
 
+* **Tunic Change at Lvl 7.ips**			- Makes it so that the new implemented Blue Tunic changes to the Red Tunic at Defense Level 7 instead of Defense Level 5 (change is just aesthetic).
+
 -------------------
 
 ## TO-DO

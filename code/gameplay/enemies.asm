@@ -141,8 +141,8 @@ org $94DB	// 0x155EB
 //---------------------------------------------
 
 bank 7;
-// Disallow Moa from stealing Exp
-org $E2FD	// 0x1E30D
+// Disallow Moa & Bago from stealing Exp
+org $1E2FD	// 0x1E30D
 	lda.b #$00	// Originally LDA #$0A
 	cpy.b #$06	// Check if Enemy = $06 (Moa)
 	bne $02		// BNE $02

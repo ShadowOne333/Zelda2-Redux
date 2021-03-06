@@ -79,5 +79,7 @@
 // Static experience points while placing each Palace Crystal
 //incsrc code/optional/StaticExpAtPalaceCrystal.asm
 
+// Make the Blue Tunic change to Red Tunic at Lvl 7 instead of 5
+//incsrc code/optional/TunicChangeLvl7.asm
 
 
