@@ -22,6 +22,15 @@ org $94D5	// $094E5
 	db $8A,$49,$CB	// Orange-Red Lizalfos fix - Originally 89 4A CB
 	db $87,$00,$00,$00,$00,$00,$00
 
+bank 3;
+// Original Experience Points and Steal Experience (Exp)
+org $D4D5	// 0x0D4E5
+	db $40,$40,$40,$C2,$C0,$80,$C6,$C3
+	db $00,$00,$80,$C0,$00,$18,$10,$20
+	db $34,$08,$18,$10,$08,$18,$00,$00
+	db $18,$10,$08,$18,$00,$10,$2C,$2C
+	db $00,$00,$00
+
 bank 4;
 // Original Hit Points (HP)
 org $11421	// $11421

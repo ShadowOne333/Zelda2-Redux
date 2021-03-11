@@ -27,7 +27,7 @@ bank 2;
 // Move Basilisk at cave north of Nabooru to the left, to prevent a weird screen wrap upon entry
 org $89CF	// 0x089DF
 	db $7D,$98
-// Move Moa atPath of Fire entrance by the graveyard up, preventing a forced hit on Link.
+// Move Moa at Path of Fire entrance by the graveyard up, preventing a forced hit on Link.
 org $8A1F	// 0x08A2F
 	db $40
 
