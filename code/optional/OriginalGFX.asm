@@ -6,6 +6,8 @@ bank 0;
 // Palette for Falling animation (Link's)
 org $A849	// 0x02859
 	db $0F,$18,$36,$2A
+org $A9FA	// 0x02A0A
+	db $18,$01,$12,$21,$30,$21,$37
 
 
 bank 1;

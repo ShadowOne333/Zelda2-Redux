@@ -19,10 +19,10 @@ shield_tunic:
 red_tunic:
 	lda.b #$16	// Load color $16 (Red)
 	sta.w $69DE	// Store into Link's current palette
-	sta.w $070F	// Store into LInk's color after Shield spell
+	sta.w $070F	// Store into Link's color after Shield spell
 	rts
 blue_tunic:
 	lda.b #$11	// Load color $11 (Blue)
 	sta.w $69DE	// Store into Link's current palette
-	sta.w $070F	// Store into LInk's color after Shield spell
+	sta.w $070F	// Store into Link's color after Shield spell
 	rts

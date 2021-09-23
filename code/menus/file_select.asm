@@ -180,11 +180,10 @@ l_BE48:
 	rts
 
 
-org $B759	// 0x17769
-	lda.b #$C7	// LDA #$FF
-
 // Bugfix for the alphabet cursor covering the box line
-org $B86C	// 0x1787C
+org $B759	// 0x17769 (Name)
+	lda.b #$C7	// LDA #$FF
+org $B86C	// 0x1787C (Letters Box)
 	lda.b #$C7	// LDA #$FF	
 
 // File Selection Palettes for Link
