@@ -6,6 +6,9 @@
 // Famicom Disk System version King's Tomb layout
 //incsrc code/optional/FDSKingsTomb.asm
 
+// Fairy Spell doesn't go through doors
+//incsrc code/optional/FairyDoor.asm
+
 // Keep Experience Points after Game Over
 // (Doesn't carry over on Reboot!)
 //incsrc code/optional/KeepExpAtGameOver.asm

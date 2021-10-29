@@ -89,6 +89,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Change Text Sound.ips**			- Modifies the sound effect that plays when each character is parsed/written in the Dialog/Text box, to another sound effect that isn't as intrusive or noisy due to the increased text speed.
 
+* **Fairy Doesn't Go Through Doors.ips** 	- Self-explanatory. This patch changes the behaviour of the Fairies on Doors, so when you  use the Fairy Spell, you cannot go through any doors anymore.
+
 * **FDS King's Tomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
