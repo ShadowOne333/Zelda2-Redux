@@ -39,7 +39,6 @@ incsrc code/gameplay/saria_bridge.asm	// Bridge at Saria draws automatically aft
 incsrc code/gameplay/tunic.asm		// Make Shield spell change tunic to Blue and Red
 incsrc code/gameplay/overworld_animation.asm	// Code to allow for the extra CHR banks to be used for animation in the overworld
 incsrc code/gameplay/overworld_pause.asm	// PAUSE message for the overworld (like in the GBA re-release)
-incsrc code/menus/file_select.asm	// Modifications to the File Select menus
 incsrc code/sound/battle_theme.asm	// FDS Battle Theme in East Hyrule
 
 //****************************************
@@ -59,7 +58,8 @@ incsrc code/gfx/hud_tiles.asm		// HUD layout modifications
 incsrc code/gfx/palettes.asm		// Several palette changes
 incsrc code/gfx/title_screen.asm	// Title screen changes
 incsrc code/menus/lives_counter.asm	// Change the Life Counter to cap out at 9 lives (RAM still counts up to 15 or $0F)
-incsrc code/menus/menus.asm		// Character or tile changes for Menus
+incsrc code/menus/menu_tiles.asm	// Character or tile changes for Menus
+incsrc code/menus/menu_tweaks.asm	// Modifications to the File Select menus
 incsrc code/menus/panes.asm		// Changes to the Pause and Level-Up panes
 
 //****************************************
