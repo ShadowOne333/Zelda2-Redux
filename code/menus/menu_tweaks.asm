@@ -1,5 +1,6 @@
 //***************************************************************
 // File Select changes (by DarkSamus993, D-man and Cyneprepou4uk)
+//	     Copy/Erase save file system by minucce
 // -  Code should be used only for educational, documentation and modding purposes
 //***************************************************************
 
@@ -8,7 +9,31 @@
 //****************************************
 table code/text/text.tbl
 
-//----------------------------------------
+//****************************************
+// 	Continue Screen modifications
+//****************************************
+
+bank 7;
+org $CA85	// 0x1CA95
+	lda.b $F7	// Current input
+	cmp.w $0744	// Previous input
+	beq $CAF6	// Wait for unique press
+
+	and.b #$10	// Start = Confirm
+	bne $CA9C
+
+	lda.b $F7	// Down,Up,Select = Move cursor
+	and.b #($04|$08|$20)
+	beq $CAF6
+	bne $CAF9
+
+	nop #4
+
+//warnpc $CA9C
+
+//****************************************
+// 	Main File Select changes
+//****************************************
 
 bank 5;
 org $B281	// 0x17291

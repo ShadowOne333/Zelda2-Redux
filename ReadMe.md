@@ -39,6 +39,7 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 * Reworked HUD to be more in-line with other Zelda titles. It also looks much better to the eye now and is more streamlined
 * Added 1/4 heart gauge by IcePenguin. Now the life meter is reduced by 1/4 parts instead of the original sliding bar, effectively letting you know exactly how much health (no longer will the meter show no life with Link still alive)
 * Reworked title screen. Now the Sword in it is the same as the one in the original US boxart, and also the scrolling text of the title screen has been entirely rewritten to be more in-line with the canon story of Zelda II
+* Copy/Erase Save Feature: Now Zelda 2 has a newly implemented feature, similar to subsequent releases of the franchise, where you can Copy and/or Erase a save file to another Save Slot.
 * Manual Save Feature: You can now save the game by Pausing and then pressing Up+A on the Pause screen (both in side-scroll pause and overworld pause!)
 * Manual saves no longer count towards the Death counter in the Selection screen! Now only Game Overs should increment that counter
 * Implemented @njosro's Restart in Current Palace patch (as a bonus) :P
@@ -151,12 +152,6 @@ This patch already includes the "KeepExpAtGameOver.ips" hack into it.
 
 -------------------
 
-## TO-DO
-
-* Implementation of a Copy/Erase save file system overhaul, like in subsequent Zeldas, by DarkSamus993 pending for main Redux patch. i.e. D-Pad Up and Down control the cursor in the File Selection and pressing A brings up the Name screen in an Empty File, and the other two options should be Copy/Erase. (Example: ALttP or OoT Copy/Erase save file)
-
--------------------
-
 ## Instructions
 
 To play Zelda 2 Redux, the following is required:
@@ -176,6 +171,7 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **Trax** - For his amazing disassembly of Zelda 2, which helped with a ton of stuff, and also for a lot of feedback and help in the development of this hack.
 * **njosro** - For his Zelda 2 editor and help towards some hacks for Redux, like the Restart in Palace hack and also the restoration of the Erdrick line.
 * **IcePenguin** - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
+* **Minucce** - For the fully functional Copy/Erase save file system feature
 * **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
 * **Cyneprepou4uk** - For his help and polish on some ASM routines
