@@ -171,7 +171,7 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **Trax** - For his amazing disassembly of Zelda 2, which helped with a ton of stuff, and also for a lot of feedback and help in the development of this hack.
 * **njosro** - For his Zelda 2 editor and help towards some hacks for Redux, like the Restart in Palace hack and also the restoration of the Erdrick line.
 * **IcePenguin** - For his incredible and consistent help with a lot of ASM hacks and other nifty stuff. He also helped with a bunch of the Optional patches.
-* **Minucce** - For the fully functional Copy/Erase save file system feature
+* **Minucce** - For the fully functional Copy/Erase save file system feature.
 * **DarkSamus993** - For his ASM dark magic regarding the Menus revamp for Redux.
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
 * **Cyneprepou4uk** - For his help and polish on some ASM routines
