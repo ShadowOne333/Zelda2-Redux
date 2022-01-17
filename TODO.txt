@@ -1,2 +1,0 @@
-Check:
-	- Keep EXP should keep the Exp when using Up+A to Continue as well
