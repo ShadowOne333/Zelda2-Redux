@@ -1,5 +1,5 @@
 
-# THE LEGEND OF ZELDA 2: ADVENTURE OF LINK REDUX
+# THE LEGEND OF ZELDA: THE ADVENTURE OF LINK REDUX
 
 ----------------------------------------------------------------------------------
 
