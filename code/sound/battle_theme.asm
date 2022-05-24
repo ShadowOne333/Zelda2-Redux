@@ -67,7 +67,7 @@ org $A000	// 0x1A010
 	dw $B073	// Pointer to Square 1
 	db $4B		// Offset for Square 2
 	db $27		// Offset for Triangle
-	db $68		// OFfset for Noise
+	db $68		// Offset for Noise
 // Intro - Part 2 (0A - 25)
 	db $18
 	dw $B0EB

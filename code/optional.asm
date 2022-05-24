@@ -20,6 +20,12 @@
 // CANNOT BE COMBINED WITH REVILITY'S GFX NOR ORIGINAL GFX HACKS!!!
 //incsrc code/optional/NewGFX.asm
 
+// Only the FDS Battle Theme plays for all encounters
+//incsrc code/optional/OnlyFDSBattleTheme.asm
+
+// Only the NES Battle Theme plays for all encounters
+//incsrc code/optional/OnlyNESBattleTheme.asm
+
 // Original Zelda 2 enemy attributes (Exp, HP, Respawn)
 //incsrc code/optional/OriginalEnemyAttributes.asm
 

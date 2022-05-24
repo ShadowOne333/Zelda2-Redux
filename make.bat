@@ -1,7 +1,7 @@
 @ECHO OFF
 
 SET dopause=0
-SET file_base=Zelda2_Redux
+SET file_base=Zelda2-Redux
 SET "out_folder=%~dp0out"
 SET "patches_folder=%~dp0\patches"
 SET "clean_rom=rom\Zelda II - The Adventure of Link (USA).nes"

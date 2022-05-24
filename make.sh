@@ -1,6 +1,6 @@
 #! /bin/bash
 
-export	file_base=Zelda2_Redux
+export	file_base=Zelda2-Redux
 export  out_folder=out
 export	patches_folder=patches
 export  clean_rom=rom/Zelda2.nes
@@ -41,7 +41,7 @@ if [ "$sha1" == "$checksum" ]; then
 
 cp "$clean_rom" "$patched_rom"
 bin/xkas -o "$patched_rom" "$asm_file"
-bin/flips --create --ips "$clean_rom" "$patched_rom" "$patches_folder/Zelda2_Redux.ips"
+bin/flips --create --ips "$clean_rom" "$patched_rom" "$patches_folder/$file_base.ips"
 
 jumpto END
 

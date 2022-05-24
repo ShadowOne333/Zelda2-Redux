@@ -9,7 +9,7 @@ bank 0;
 // Hijack original overworld FDS theme loading routine to change the region check to instead play the theme at random
 org $A905	// 0x02915
 	bne l_A910	// Original FDS Theme branch
-	lda.b #$04	// Load NES Battle Theme ($08)
+	lda.b #$04	// Load NES Battle Theme ($04)
 	bit.w $051A	// Randomization address
 	bmi l_A910	// Branch if it's above $80
 	lda.b #$08	// Load FDS Battle Theme ($08)
