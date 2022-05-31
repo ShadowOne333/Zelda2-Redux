@@ -9,7 +9,7 @@ org $CA5F	// 0x1CA6F
 	sta.w $0756	// Originally 8D 76 07 - STA $0776
 
 org $CABA	// 0x01CACA
-	beq.b $14		// F0 14 - Originally BEQ $08 - Branch to 0x1CAE0
+	beq $14	// F0 14 - Originally BEQ $08 - Branch to 0x1CAE0
 	lda.b #$00	// Originally LDA #$40
 	sta.w $0775	// Store in current experience (high byte)
 	sta.w $0776	// Store in current experience (low byte)
