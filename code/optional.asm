@@ -21,9 +21,11 @@
 //incsrc code/optional/NewGFX.asm
 
 // Only the FDS Battle Theme plays for all encounters
+// WARNING! - CAN'T be combined with the Random Battle Theme patch!
 //incsrc code/optional/OnlyFDSBattleTheme.asm
 
 // Only the NES Battle Theme plays for all encounters
+// WARNING! - CAN'T be combined with the Random Battle Theme patch!
 //incsrc code/optional/OnlyNESBattleTheme.asm
 
 // Original Zelda 2 enemy attributes (Exp, HP, Respawn)

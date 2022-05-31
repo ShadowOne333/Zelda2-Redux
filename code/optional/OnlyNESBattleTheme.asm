@@ -2,24 +2,23 @@
 //	Only the NES theme plays during battles/encounters
 //****************************************************************
 
-bank 6;
+// Overworld music change routine by IcePenguin
+bank 0; org $A912	// 0x02922
+	lda.b #$04	// Load music entry $04
+
+//-------------------------------------------------------------
 // Hijack original overworld FDS theme loading routine to change the region check to instead play the theme at random
-org $9489	// 0x19499
-	jsr l_9DC0
-	nop
+bank 6; org $9DC7	// 0x19DD7
+	lda.b #$04	// Force NES Battle Theme ($04)
+org $9DCC	// 0x19DDC
+	lda.b #$04	// Force NES Battle Theme ($04)
 
-org $9DC0	// 0x19DD0
-l_9DC0:
-	lda.b #$04	// Load NES Battle Theme ($08)
-	bit.w $051A	// Randomization address
-	bmi l_9DCA	// Branch if it's above $80
-	sta.b $EB	// Store in 'music' address
-	rts
-l_9DCA:
-	lda.b #$04	// Load FDS Battle Theme ($08)
-	sta.b $EB	// Store in 'music' address
-	lda.b #$00	// Load $00 into accumulator
-	sta.w $0702	// Store to $0702 (Copied world address)
-	rts
+//-------------------------------------------------------------
+// Routine for loading new battle theme into East Hyrule
+bank 7; org $FEBB	// 0x1FECB
+	lda.b #$04	// Force NES battle theme ($04)
+org $FEC1	// 0x1FED1
+	lda.b #$04	// Force NES battle theme ($04)
 
-	fill $02,$FF
+//-------------------------------------------------------------
+

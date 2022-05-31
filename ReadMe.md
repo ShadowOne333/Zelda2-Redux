@@ -100,6 +100,10 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **New GFX.ips**				- Completely revamped graphics courtesy of darthvaderx, based on the graphics used in the "Rev Edition" and "New Link Sprites" hacks.
 
+* **Only FDS Battle Theme.ips**				- Makes it so that only the FDS Battle Theme plays in all overworld encounters and enemy battles, basically replaces the NES Battle Theme in all areas to function similar to the FDS release.
+
+* **Only NES Battle Theme.ips**				- Makes it so that only the NES Battle Theme plays in all overworld encounters and enemy battles, basically keeps the NES Battle Theme in all areas to funcion just like the original NES release.
+
 * **Original Enemy Attributes.ips**		- This patch restores the original enemy attributes of vanilla Zelda 2, meaning the enemies will drain Exp. from Link, and they will have the same HP and give the same Exp. from the original game. (Note: This fixes the bugged Orange/Red Lizalfos from the original game too)
 
 * **Original Enemy Drops.ips**			- Zelda 2 Redux handles an enemy kill counter of 5 for each item dropped from killing enemies. This restores the enemy kill counter to 6, the same as the original Zelda 2.
