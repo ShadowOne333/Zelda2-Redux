@@ -94,6 +94,8 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **FDS King's Tomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
+* **FDS Exp Requirements.ips** 			- This patch restores the Exp requirements needed for the next levels from the original FDS release of Zelda II.
+
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
 
 * **New Exp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
