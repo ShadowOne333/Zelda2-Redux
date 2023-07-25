@@ -6,6 +6,9 @@
 // Famicom Disk System version King's Tomb layout
 //incsrc code/optional/FDSKingsTomb.asm
 
+// Famicom Disk System version Experience Levels requirements
+//incsrc code/optional/FDSExpRequirements.asm
+
 // Fairy Spell doesn't go through doors
 //incsrc code/optional/FairyDoor.asm
 
