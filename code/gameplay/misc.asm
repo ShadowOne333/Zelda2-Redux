@@ -96,3 +96,30 @@ org $E89F	// 0x1E8AF
 //	nop #06
 //bank 7; org $CAC4	// 0x1CAD4
 //	nop #06
+
+
+//***********************************************************
+//	8th Magic Container Fix
+//***********************************************************
+// Container 1 - $0616 = $FE
+// Container 2 - $062D = $BF
+// Container 3 - $0632 = $BF
+// Container 4 - $???? = $FE
+// Check for the Kasuto container at $079D = $08
+
+bank 7;
+org $E7DB
+	lda $079D
+	ora #$FF
+	sta $079D
+	//jsr test
+	//nop #5
+
+//org $D3A6	// 0x1D3B6
+//test:
+	//lda $0783
+	//cmp #$07
+	//asl
+	//sta $079D
+	//rts
+
