@@ -40,6 +40,7 @@ incsrc code/gameplay/tunic.asm		// Make Shield spell change tunic to Blue and Re
 incsrc code/gameplay/overworld_animation.asm	// Code to allow for the extra CHR banks to be used for animation in the overworld
 incsrc code/gameplay/overworld_pause.asm	// PAUSE message for the overworld (like in the GBA re-release)
 incsrc code/sound/battle_theme.asm	// FDS Battle Theme in East Hyrule
+incsrc code/gameplay/lagpatch.asm	// Needs modifications for compatibility with Redux
 
 //****************************************
 //	Text changes

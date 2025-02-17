@@ -182,6 +182,8 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **JaSp** - For the animation on the overworld from Shadow of Night, which was reverse engineered by Trax for this hack.
 * **Cyneprepou4uk** - For his help and polish on some ASM routines
 * **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
+* **Justin Olbrantz (Quantam)** - For the [Zelda 2 Lag Patch](https://github.com/TheRealQuantam/z2lagpatch) hack that significantly reduces CPU usage, which was modified for use with Redux.
+* **Mariofan2468** - For his help to make the Lag Patch code by Quantam to work properly with Redux.
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
 -------------------
