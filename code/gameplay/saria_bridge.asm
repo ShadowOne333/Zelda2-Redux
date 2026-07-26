@@ -2,7 +2,10 @@
 //  Saria Bridge Draws Automatically on Subsequent Visits
 // 		(by IcePenguin)
 //***********************************************************
-
+// Note: RAM address $077A is a confirmed unused RAM address that we can use
+// It was $079D previously, but that caused a bug with the 8th container since that RAM is used for Kasuto bitflags
+// (RAM fix by suloku)
+//-----------------------------------------------------------
 bank 0;
 // Hijacks for Saria Bridge code
 org $97A4
@@ -42,8 +45,8 @@ l_AC90:
 
 org $ACD0	// 0x02CE0
 	lda.b #$01
-	cmp.w $079D	// Compare with 7 magic containers address
-	bne end1	// BNE $25
+	cmp.w $077A	// Check if Saria's Bridge has been enabled before
+	bne end1	// BNE $25, branch out if the Bridge has already been triggered before
 	lda.b #$06
 	cmp.w $0561	// Compare with area code address
 	bne end1	// BNE $1E
@@ -69,7 +72,7 @@ end1:
 org $AD00	// 0x02D10
 	sta.w $0796
 	lda.b #$01
-	sta.w $079D	// Have 7 magic containers
+	sta.w $077A	// Store into free RAM address specific for Saria's Bridge check
 	rts
 
 bank 3;

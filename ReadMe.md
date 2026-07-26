@@ -13,6 +13,8 @@
 
 * [**Patching and Usage Instructions**](#instructions)
 
+* [*Can't get the 8th Magic container in Kasuto?*](#magic-container-fix)
+
 * [**Credits**](#credits)
 
 * [**Project Licence**](#license)
@@ -172,6 +174,25 @@ If you want to apply any of the optional patches, you can use each Optional patc
 
 -------------------
 
+## Magic Container Fix
+
+In previous versions of Zelda 2 Redux, there was a bug with the Saria Bridge hack that wrote into RAM address $079D, previously thought to be a free RAM address.
+However, it was later found out that said RAM address $079D wasn't actually a free address, that address is used for flags in Kasuto, hence breaking the method to normally obtain the 8th Magic container in the game, with the lady that prompts you to enter her house to get the Final Magic Container after getting the other 3 Magic container in the world.
+
+* What triggered the bug?
+If the player went back to Saria's Bridge after getting the 3rd Magic Container, that switched around the value at RAM $079D, effectively making the 8th Magic Container conditions not match with how it was properly coded in the game.
+
+This has since been fixed in Zelda 2 Redux as of July 2026, thanks to the research done by suloku, but for those in older versions of Zelda 2 Redux, or those that want to update to the latest version of Z2 Redux and want to apply the fix to an already create save of Zelda 2, can apply the following cheat code to reset the RAM to its proper value:
+
+	`AAKLGKAE`
+
+Make sure to enable that code the FIRST time you enter Kasuto, and that you go directly to the old lady if you already have the other 3 Magic containers.
+This modifies a certain routine in the ROM ($B444) to detect if the Magic containers condition has been met, and if it has, then force $079D to be $08.
+That effectively forces the Kasuto old lady to always invite Link into her home, making it possible to now obtain the 8th Magic Container despite of the old bug.
+Be sure that once you enter the old lady's home, you disable the cheat code, as by then it will no longer be needed, and to avoid any further bugs due to the cheat code being enabled later on the playthrough.
+
+-------------------
+
 ## Credits
 
 * **Trax** - For his amazing disassembly of Zelda 2, which helped with a ton of stuff, and also for a lot of feedback and help in the development of this hack.
@@ -184,6 +205,7 @@ If you want to apply any of the optional patches, you can use each Optional patc
 * **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 * **Justin Olbrantz (Quantam)** - For the [Zelda 2 Lag Patch](https://github.com/TheRealQuantam/z2lagpatch) hack that significantly reduces CPU usage, which was modified for use with Redux.
 * **Mariofan2468** - For his help to make the Lag Patch code by Quantam to work properly with Redux.
+* **suloku** - For his help on fixing the years-old 8th Magic container bug that plagued the hack for a long time.
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
 -------------------

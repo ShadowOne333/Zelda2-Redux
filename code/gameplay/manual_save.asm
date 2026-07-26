@@ -34,7 +34,7 @@ org $CA9C	// 0x1CAAC
 // Hijack for the manual save fix 
 	jsr l_D3A0	// Originally LDA $079F
 
-org $D39A	// 0x1D3AA, moved for space with Magic Containers fix
+org $D39A	// 0x1D3AA
 l_D3A0:
 	lda.w $0700	// Load number of lives
 	beq l_D3A8	// If A=0 (Lives=0), branch to original code
