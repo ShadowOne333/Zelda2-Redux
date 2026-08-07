@@ -48,6 +48,7 @@ incsrc code/gameplay/lagpatch.asm	// Needs modifications for compatibility with 
 incsrc code/text/script.asm		// Relocalization of the game's script
 incsrc code/text/story.asm		// Rewrite of the game's story and intro texts
 incsrc code/text/credits.asm		// Rewrite of the game's credits sequences
+incsrc code/text/game_over.asm		// Rewrite of the game's story and intro texts
 incsrc code/text/textmisc.asm		// Various changes to text-related code
 
 //****************************************

@@ -31,6 +31,7 @@ org $CB12	// 0x1CB22
 org $FDD6	// 0x1FDE6
 	db $9C	// Originally $FA
 // Move old comma ($9C) for new one ($32) in Continue/Save screen
-org $FE38	// 0x1FE48
-	db $32	// Originally $9C
+// Handled by game_over.asm in 'text'
+//org $FE38	// 0x1FE48
+	//db $32	// Originally $9C
 
