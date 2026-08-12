@@ -1,37 +1,35 @@
-//***********************************************************
-//	Menu changes
-//***********************************************************
+;***********************************************************
+;	Menu changes
+;***********************************************************
 
-bank 0;
-// Change right black screen border on Overworld for PAUSE usage
-org $878C	// 0x0079C
-	lda.b #$9C	// Originally LDA #$FF
-// Change old Arrow tile for new one
-org $9F38	// 0x01F48
-	lda.b #$9C	// LDA #$FB
-// Change Magic bag tile for new Arrow
-org $A251	// 0x02261
-	lda.b #$9C	// Originally LDA #$FA
-// Change Magic bag tile for new Arrow
-org $A63D	// 0x0264D
-	lda.b #$9C	// Originally LDA #$FA
-// Change old Arrow tile for new one
-org $A67B	// 0x0268B
-	ldx.b #$9C	// Originally LDA #$FB
-// Change "x" in Lives remaining screen to uppercase "X"
-org $A991	// 0x029A1
-	db "X"		// Originally $FC or "x"
+; Change right black screen border on Overworld for PAUSE usage
+%org($878C,0)	; 0x0079C
+	lda.b #$9C	; Originally LDA #$FF
+; Change old Arrow tile for new one
+%org($9F38,0)	; 0x01F48
+	lda.b #$9C	; LDA #$FB
+; Change Magic bag tile for new Arrow
+%org($A251,0)	; 0x02261
+	lda.b #$9C	; Originally LDA #$FA
+; Change Magic bag tile for new Arrow
+%org($A63D,0)	; 0x0264D
+	lda.b #$9C	; Originally LDA #$FA
+; Change old Arrow tile for new one
+%org($A67B,0)	; 0x0268B
+	ldx.b #$9C	; Originally LDA #$FB
+; Change "x" in Lives remaining screen to uppercase "X"
+%org($A991,0)	; 0x029A1
+	db "X"		; Originally $FC or "x"
 
 
-bank 7; 
-// Change Magic bag tile for new Arrow
-org $CB12	// 0x1CB22
-	lda.b #$9C	// Originally LDA #$FA
-// Change Magic bag tile for new Arrow in Continue/Save screen
-org $FDD6	// 0x1FDE6
-	db $9C	// Originally $FA
-// Move old comma ($9C) for new one ($32) in Continue/Save screen
-// Handled by game_over.asm in 'text'
-//org $FE38	// 0x1FE48
-	//db $32	// Originally $9C
+; Change Magic bag tile for new Arrow
+%org($CB12,7)	; 0x1CB22
+	lda.b #$9C	; Originally LDA #$FA
+; Change Magic bag tile for new Arrow in Continue/Save screen
+%org($FDD6,7)	; 0x1FDE6
+	db $9C	; Originally $FA
+; Move old comma ($9C) for new one ($32) in Continue/Save screen
+; Handled by game_over.asm in 'text'
+;%org($FE38,7)	; 0x1FE48
+	;db $32	; Originally $9C
 

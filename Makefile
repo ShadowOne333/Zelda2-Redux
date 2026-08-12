@@ -1,4 +1,4 @@
-# Makefile for compiling Zelda 2 Redux Redux
+# Makefile for compiling Zelda 2 Redux
 SHELL := /bin/bash
 #-------------------------------------
 .PHONY: all verify-name prepare verify-sha apply-patch
@@ -16,7 +16,7 @@ XKAS = bin/xkas
 FLIPS = bin/flips
 CHECKSUM = 353489a57f24a429572e76bd455bc51d821f7036
 #-------------------------------------
-all: verify-name prepare verify-sha prepare apply-patch
+all: verify-name prepare verify-sha prepare compile-asm create-bps
 #-------------------------------------
 verify-name:
 	@if [ -e "$(BASE_ROM)" ]; then \
@@ -43,19 +43,30 @@ verify-sha:
 		echo "Base ROM checksum is incorrect. Use a Zelda 2 ROM with the proper SHA-1 checksum for patching."; \
 	fi
 #-------------------------------------
-apply-patch:
+# Compile: Run Asar on the main assembly code
+compile-asm:
+	@echo "Beginning main assembly code compilation with Asar..."
 	@cp "$(CLEAN_ROM)" "$(PATCHED_ROM)"
-	@"$(XKAS)" -o "$(PATCHED_ROM)" "$(ASM_FILE)"
+	@"$(ASAR)" --no-title-check --fix-checksum=off $(ASM_FILE) $(PATCHED_ROM)
 #	@"$(ASAR)" --no-title-check "$(ASM_FILE)" "$(PATCHED_ROM)"
+#	@"$(XKAS)" -o "$(PATCHED_ROM)" "$(ASM_FILE)"
+	@echo ""
+	@echo "Main assembly code compilation succeeded!"
+	@echo ""
+#-------------------------------------------------------------
+# Create BPS patch
+create-bps:
+	@echo "Creating $(FILE_BASE).bps patch..."
 	@"$(FLIPS)" --create --bps "$(CLEAN_ROM)" "$(PATCHED_ROM)" "$(PATCHES_FOLDER)/Zelda2_Redux.bps"
 # Uncomment the following line if you want to create an IPS patch as well
 #	"$(FLIPS)" --create --ips "$(CLEAN_ROM)" "$(PATCHED_ROM)" "$(PATCHES_FOLDER)/Zelda2_Redux.ips"
 #-------------------------------------
 clean:
+	@echo "Cleaning up generated files..."
 	@rm -f "$(CLEAN_ROM)" "$(PATCHED_ROM)" "$(PATCHES_FOLDER)/Zelda2_Redux.bps"
 # Uncomment the following line if you want to clean up the IPS patch as well
 #	@rm -f "$(CLEAN_ROM)" "$(PATCHED_ROM)" "$(PATCHES_FOLDER)/Zelda2_Redux.ips"
-	@echo "Cleaned patches and compiled ROMs."
+	@echo "Clean complete."
 #-------------------------------------
 # Convenience target to only build patched ROM (skips checksum)
 .PHONY: quick
