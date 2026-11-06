@@ -220,7 +220,7 @@ Be sure that once you enter the old lady's home, you disable the cheat code, as 
 * **darthvaderx** - For the New GFX optional patch, which combines assets from both "Rev Edition" and "New Link Sprite".
 * **Justin Olbrantz (Quantam)** - For the [Zelda 2 Lag Patch](https://github.com/TheRealQuantam/z2lagpatch) hack that significantly reduces CPU usage, which was modified for use with Redux.
 * **Mariofan2468** - For his help to make the Lag Patch code by Quantam to work properly with Redux.
-* **suloku** - For his help on fixing the years-old 8th Magic container bug that plagued the hack for a long time.
+* **suloku** - For his help on fixing the years-old 8th Magic container bug that plagued the hack for a long time. Also, for the Auto Fairy, Run, Same Continent Respawn, Faster Elevators and Longer Sword Reach optional patches.
 * All other users that gave their feedback on possible ways to improve the game over the thread, and those that gave insightful ideas.
 
 -------------------
