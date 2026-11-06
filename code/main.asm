@@ -29,6 +29,7 @@ incsrc code/gameplay/palaces.asm	; Palaces (and Great Palace) modifications
 incsrc code/gameplay/permanent_dolls.asm	; Obtaining a Link Doll adds one life permanently to the Lives Counter
 incsrc code/gameplay/restart_palace.asm	; Restart at Palace entrance on Game Over (by njosro)
 incsrc code/gameplay/saria_bridge.asm	; Bridge at Saria draws automatically after showing the guard the letter for the 1st time
+incsrc code/gameplay/sword_reach.asm	; Pixel perfect sword collision (Extended by 2 px)
 incsrc code/gameplay/tunic.asm		; Make Shield spell change tunic to Blue and Red
 incsrc code/gameplay/overworld_animation.asm	; Code to allow for the extra CHR banks to be used for animation in the overworld
 incsrc code/gameplay/overworld_pause.asm	; PAUSE message for the overworld (like in the GBA re-release)

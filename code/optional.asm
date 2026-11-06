@@ -3,6 +3,9 @@
 ; Uncomment the desired Optional patches
 ;*****************************************************************
 
+; Fairy Spell gets activated automatically when falling into a pit if Link has enough magic to activate it
+;incsrc code/optional/Auto Fairy.asm
+
 ; Famicom Disk System version King's Tomb layout
 incsrc code/optional/FDSKingsTomb.asm
 
@@ -86,6 +89,12 @@ incsrc code/optional/RestartSameScreenAtGameOver.asm
 
 ; Rework the Title Screen to match the logo of recent Zelda titles
 incsrc code/optional/ReworkedTitleScreen.asm
+
+; Holding down A or B makes Link run/move fast
+;incsrc code/optional/Run.asm
+
+; Respawn on the same continent the player died in
+;incsrc code/optional/SameContinentRestart.asm
 
 ; Secret... ???
 incsrc code/optional/Secret.asm

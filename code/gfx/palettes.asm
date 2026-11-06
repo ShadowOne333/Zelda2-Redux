@@ -7,9 +7,13 @@
 	db $0F,$07,$37,$2A	; Originally 0F 18 36 2A
 ; Magic Flash palette modifications for Anti-seizure measures
 %org($A9F0,0)	; 0x02A00
-	db $02,$03,$02,$03
-%org($A9FA,0)	; 0x02A0A
-	db $07,$01,$12,$21,$30,$21,$37
+	db $02,$03,$02
+	db $03,$0F,$0F
+	db $30,$01,$31
+;%org($A9F9,0)	; 0x02A09
+	db $01,$07,$01
+	db $12,$21,$30
+	db $21,$37,$21
 
 
 ; Change palettes at West Hyrule so it doesn't blend with Link's new palette

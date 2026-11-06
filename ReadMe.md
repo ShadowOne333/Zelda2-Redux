@@ -82,11 +82,13 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 * FDS Battle Theme restored! The original NES battle theme will be used in West Hyrule overworld battles, while the new/restored FDS battle theme will be used in East Hyrule overworld battles (Thanks, IcePenguin!)
 * The room with the hole in the Great Palace has been modified so it can now be accessed from all routes. You can now explore the Great Palace in any path you want, since now we have branching paths that intersect on said room. This means, you no longer have to take a required path to reach the end of the Great Palace, but can now choose at will and you will not be met with a dead end
 * D-Pad Up and Down now control the cursor in the File Selection and Elimination mode menus
-
+* Link's horizontal sword swing now has a perfect pixel collision, extended the original game's sword reach by 2+ pixels (Doesn't affect breakable blocks collisions)
 
 -------------------
 
 ## Optional patches
+
+* **Auto Fairy.ips**				- When Link falls into lava/water, as long as there is enough magic available, the Fairy spell will be cast, avoiding certain death.
 
 * **Change Minor Item SFX.ips**			- Modifies the sound effect that plays when you grab a minor item, like a P-bag, magic jar, etc., so the game doesn't use the SFX as the Sword beam.
 
@@ -94,11 +96,15 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Fairy Doesn't Go Through Doors.ips** 	- Self-explanatory. This patch changes the behaviour of the Fairies on Doors, so when you  use the Fairy Spell, you cannot go through any doors anymore.
 
+* **Faster_Elevators.ips**			- Makes the elevators faster. This is an adaptation from the code in Displaced Gamers video in their Behind the Code series episode about Zelda II. You can check the video here: https://www.youtube.com/watch?v=GSSUrnIpcds&t=710s.
+
 * **FDS King's Tomb.ips** 			- This patch restores the layout of the King's Tomb screen to resemble that of the Famicom release of Zelda II.
 
 * **FDS Exp Requirements.ips** 			- This patch restores the Exp requirements needed for the next levels from the original FDS release of Zelda II.
 
 * **Keep Exp At GameOver.ips**			- Like its name says, this patch will make it so that even if you get a Game Over, you will keep the Exp you gained.
+
+* **Longer_Sword_Reach.ips**			-  Modifies Link's horizontal sword reach to a total extra lenght of 4 pixels (instead of the additional 2 from normal Redux). This isn't really noticeable in normal gameplay and makes hitting enemies slightly more forgiving.
 
 * **New Exp.ips**				- A completely revamped Exp system courtesy of IcePenguin! This system makes it so that you will no longer get the Level Up window prompt once you reach the required Exp for a new level. Instead, Experience points will now accumulate, and once you want to Level Up a certain ability, pressing Up+Start will automatically bring up the Level Up menu, even if you don't have enough Exp for a level up. In that case, the only available option will be "Cancel".
 
@@ -138,6 +144,15 @@ https://www.romhacking.net/forum/index.php?topic=26001.0
 
 * **Restart Same Screen At GameOver.ips**	- This patch makes it so that when you get a Game Over, you restart in the same screen that you died on, instead of being brought back to the beginning of the current palace or Zelda's Palace in the case of the overworld.
 This patch already includes the "KeepExpAtGameOver.ips" hack into it.
+
+* **Run.ips**					- Holding A or B button will make Link's run, allowing for faster traversal in the sidescrolling sections. The additional inertia also allows for a longer horizontal jump, but as far as I know this doesn't introduce any skips. *NOTE:* Jump, Slash and Hold the slash button to be able to jump and run at the same time.
+
+* **Same_Continent_Restart.ips**		- When Link runs out of lives, instead of always respawning at Zelda's Palace, he will respawn on the same continent he died:
+	* Die in the Western Continent: Respawn at Zelda's Palace
+	* Die in Death Mountain area: Respawn at the westernmost screen of Saria.
+	* Die in the Eastern Continent: Respawn at Nabooru
+	* Die in the Maze Island: Respawn at Nabooru
+	* Die in the Great Palace's Path of Fire: Respawn at deserted Kasuto as long as you have the Thunder spell or have read the signpost at deserted Kasuto. If those conditions don't apply, respawn at Nabooru.
 
 * **Static Exp At Palace Crystal.ips**		- At the end of each palace, where you put the crystal into it, you used to get an undefined amount of Exp, until you leveled up. This patch was made to prevent wasting Exp by placing the crystal, now each crystal put into a palace gives you a determined amount of Exp:
 
