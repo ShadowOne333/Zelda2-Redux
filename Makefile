@@ -14,7 +14,9 @@ ASM_FILE = code/main.asm
 ASAR = bin/asar
 XKAS = bin/xkas
 FLIPS = bin/flips
-CHECKSUM = 353489a57f24a429572e76bd455bc51d821f7036
+CHECKSUM_1 = 353489a57f24a429572e76bd455bc51d821f7036
+# NO-INTRO ROM checksum
+CHECKSUM_2 = 08fa60f23e477752fdd850b1fd4171c6ca025127
 #-------------------------------------
 all: verify-name prepare verify-sha prepare compile-asm create-bps
 #-------------------------------------
@@ -37,7 +39,7 @@ verify-sha:
 		echo "Base ROM was not found. Place the 'Zelda II - The Adventure of Link (USA).nes' ROM inside the 'rom' folder."; \
 	fi
 	@sha1=$$(sha1sum "$(CLEAN_ROM)" | awk '{print $$1}'); \
-	if [ "$$sha1" = "$(CHECKSUM)" ]; then \
+	if [ "$$sha1" = "$(CHECKSUM_1)" ] || [ "$$sha1" = "$(CHECKSUM_2)" ]; then \
 		echo "Base ROM SHA-1 checksum verified. Patching Zelda 2 with Redux hack..."; \
 	else \
 		echo "Base ROM checksum is incorrect. Use a Zelda 2 ROM with the proper SHA-1 checksum for patching."; \
